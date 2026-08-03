@@ -1,4 +1,4 @@
 <?php
-    include "navbar.php"
+    include "navbar.php";
     echo "homepage";
 ?>

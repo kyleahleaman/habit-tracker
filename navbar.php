@@ -18,7 +18,8 @@
             color: #2a2b2e;
             padding: 14px 26px;
             text-decoration: none;
-            font-size: 20px;
+            font-size: 17px;
+            
         }
 
         li a:hover {
@@ -32,12 +33,12 @@
         <nav>
             <ul>
                 <?PHP if($_SERVER["SERVER_ADDR"]=="127.0.0.1"){ ?>
-                    <li><a href="/habit-tracker/homepage.php"><img src="/habit-tracker/images/home.png" width="50%"></a></li>
+                    <li><a href="/habit-tracker/homepage.php"><img src="/habit-tracker/images/home.png" width="50%"; margin: 0 auto;></a></li>
                     <li><a href="/habit-tracker/shop.php">Shop</a></li>
                     <li><a href="/habit-tracker/profile.php">{USERNAME}</a><li>
 
                 <?PHP }else{ ?>
-                    <li><a href="/habit-tracker/homepage.php"><img src="/habit-tracker/images/home.png" width="50%"></a></li>
+                    <li><a href="/homepage.php"><img src="/habit-tracker/images/home.png" width="50%"></a></li>
                     <li><a href="/habit-tracker/shop.php">Shop</a></li>
                     <li><a href="/habit-tracker/profile.php">{USERNAME}</a><li>
                 <?PHP }; ?>

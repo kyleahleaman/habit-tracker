@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 require_once('dbconfig.php');
 
 $user = $_POST['username'];
@@ -25,4 +25,4 @@ $conn->close();
 
 header('location:../index.php?message=Thanks for registering. Log in.')
 
-?> -->
+?>

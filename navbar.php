@@ -39,8 +39,8 @@
 
                 <?PHP }else{ ?>
                     <li><a href="/homepage.php"><img src="/habit-tracker/images/home.png" width="50%"></a></li>
-                    <li><a href="/habit-tracker/shop.php">Shop</a></li>
-                    <li><a href="/habit-tracker/profile.php">{USERNAME}</a><li>
+                    <li><a href="/shop.php">Shop</a></li>
+                    <li><a href="/profile.php">{USERNAME}</a><li>
                 <?PHP }; ?>
             </ul>
         </nav>

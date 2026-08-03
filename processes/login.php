@@ -22,6 +22,7 @@ $result = $stmt->get_result();
 // print_r($result);
 // exit;
 
+//Adjust variables based on survey questions
 if ($result->num_rows > 0){
     $row = $result->fetch_all(MYSQLI_ASSOC);
     // print_r($row);
@@ -30,7 +31,7 @@ if ($result->num_rows > 0){
     $_SESSION['username'] = $row[0]['username'];
     $_SESSION['coins'] = $row[0]['coins'];
     $conn->close();
-    header('location:../projects.php');
+    header('location:../homepage.php');
 }else{
     $_SESSION['loggedIn'] = 'NO';
     $_SESSION['username'] = 'hacker';

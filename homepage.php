@@ -4,6 +4,8 @@
     if($_SESSION["loggedIn"] == "NO"){
         exit;
     }
+
     include "navbar.php";
-    echo "homepage";
+    include 'footer.php';
+    
 ?>

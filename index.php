@@ -7,8 +7,6 @@
 </head>
 <body>
     <?php
-        include 'navbar.php';
-        include 'footer.php';
         if(isset($_GET["message"])){
             $message = $_GET["message"] . "<BR><BR>";
         }else{

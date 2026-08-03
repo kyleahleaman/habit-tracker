@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker Survey</title>
+    <link rel="stylesheet" href="surveyPage.css">
+</head>
+<body>
+   
+<h1>Initial Survey</h1>
+<h2>Fill out this form to continue on to the Habit Tracker!</h2>
+
+<form id="initial_survey">
+
+
+    <!-- what is your name -->
+    <h3>What's your name?</h3>
+         <input type="text" id="name" name="yourname" required>
+
+         <hr>
+
+    <!-- choose your character -->
+    <h3>Choose your avatar!</h3>
+        <input type="radio" name="character" id="penguin" value="penguin">
+            <label for="penguin">Penguin</label><br>
+
+        <input type="radio" name="character" id="narwhal" value="narwhal">
+            <label for="narwhal">Narwhal</label><br>
+
+        <input type="radio" name="character" id="dog" value="dog">
+            <label for="dog">Dog</label><br>
+
+        <input type="radio" name="character" id="cat" value="cat">
+            <label for="cat">Cat</label><br>
+
+        <hr>
+
+    <!-- age -->
+    <h3>What's your age?</h3>
+        <input type="number" id="age" name="age" min="0" max="120">
+
+        <hr>
+
+    <!-- habit options -->
+      <h3>What habit(s) do you want to improve?</h3>
+
+        <input type="checkbox" name="habits" id="sleep" value="Sleep">
+            <label for="sleep">Sleep</label><br>
+
+        <input type="checkbox" name="habits" id="execise" value="Exercise">
+            <label for="exercise">Exercise</label><br>
+
+        <input type="checkbox" name="habits" id="water" value="Drinking Water">
+            <label for="water">Drinking Water</label><br>
+
+        <input type="checkbox" name="habits" id="screen" value="Screen Time">
+            <label for="screen">Screen Time</label><br>
+        
+        <hr>
+    <!-- submit -->
+     <br>
+        <h2><input type="submit" value="Submit Survey"></h2>
+
+
+</form>    
+</body>
+</html>
+
+
+

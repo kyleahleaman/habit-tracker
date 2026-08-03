@@ -1,0 +1,49 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url(sky.jpg);
+    /* background-repeat: repeat-y; */
+    margin: 100px;
+}
+
+h1{
+    color:rgb(57, 62, 110);
+    text-align: center;
+}
+
+h2{
+    color:rgb(57, 62, 110);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form{
+    background-color: rgba(250, 235, 215, 0.619);
+    max-width: 800px;
+    border-radius: 10px;
+    padding: 25px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(176, 86, 86, 0.2);
+}
+
+hr{
+    color: rgb(71, 74, 101);
+    margin: 25px auto;
+    border: none;
+    border-top: #ff000000 1px dashed
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+   margin: 10px 10px 0 0;
+}
+
+select{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #0000;
+    padding: 10px;
+}
+
+input[type="submit"]:hover{
+    background-color: pink;}
+    

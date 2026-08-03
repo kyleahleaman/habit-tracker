@@ -3,6 +3,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Habit Tracker</title>
+    <style>
+        body {
+            background-color: #91c7b1;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        form {
+            margin-top: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 30%;
+            background-color: white;
+            margin: auto;
+        }
+
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px #5a5a66;
+            border-style: solid;
+            box-sizing: border-box;
+        }
+
+        input:hover[type="text"], input:hover[type="password"]{
+            background-color: #ddeaee;
+        }
+
+        button {
+            background-color: #91c7b1;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
 </head>
 <body>
     <?php
@@ -11,22 +56,27 @@
         }else{
             $message = "";
         }
-?>
+    ?>
+    
+    <br><br><br><br>
+
     <div class = "container">
         <form name = "login" method = "post" id = "login" action = "processes/login.php">
-            <font color = "red">
-            <?php echo $message; ?>
-            </font>
+            <font color = "red"><?php echo $message; ?></font>
 
+            <h1>Login</h1>
             <label for = "username">Username:</label><br>
             <input type = "text" name = "username" id = "username"><br><br>
 
             <label for = "password">Password:</label><br>
             <input type = "password" name = "password" id = "password"><br><br>
+        
+            <button onclick = "loginUser(event)">Login</button>
+            <br><br>
 
-            <button onclick = "loginUser(event)">Login</button><br>
-
-            <a href = "register.php">Not a member yet? Register here!</a>
+            <a href = "processes/register.php">Not a member yet? Register here!</a>
+            <br><br>
+            
         </form>
     </div>
 

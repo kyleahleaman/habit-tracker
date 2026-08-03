@@ -36,4 +36,10 @@
         }
     </script>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html> -->
+
+<?php echo 'here at register page'; ?>
+>>>>>>> f5524dd (added login css)

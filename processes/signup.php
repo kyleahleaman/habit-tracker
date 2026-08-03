@@ -5,6 +5,7 @@ $user = $_POST['username'];
 $pass = $_POST['password'];
 $cpass = $_POST['cpassword'];
 $age = $_POST['age'];
+$character = $_POST['character']
 
 // connect to my database
 $conn = new mysqli($servername, $username, $password, $database);

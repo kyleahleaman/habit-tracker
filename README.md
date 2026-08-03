@@ -1,1 +1,3 @@
 # habit-tracker
+
+Habit Tracker is a website created by Emma Lang, Kyleah Leaman, Paige Hershey, and Sophia Banh. It aims to improve a user's motivation to keep up with their health. Centered around an animal, users will keep track of statistics like hours of sleep and amount of water drank. By keeping healthy habits, the user will be able to earn coins that can be used to buy accessories for their animal.

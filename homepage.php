@@ -29,9 +29,9 @@
         .statsdiv {
             background-color: white;
             border-radius: 15px;
-            padding: 10px;
+            padding: 5px;
             margin-right: 40px;
-            height: 400px;
+            height: 425px;
             overflow: auto;
             box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
         }
@@ -39,9 +39,9 @@
         .buttonsdiv {
             background-color: white;
             border-radius: 15px;
-            padding: 10px;
+            padding: 5px;
             margin-left: 40px;
-            height: 400px;
+            height: 425px;
             overflow: auto;
             box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
         }
@@ -62,7 +62,7 @@
             <div class="buttons">
                 <br><br><br>
                 <div class="buttonsdiv">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    <h4>Exercise</h4>
                 </div>
             </div>
 
@@ -73,12 +73,16 @@
             <div class="stats">
                 <br><br><br>
                 <div class="statsdiv">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    <h4>Today you...</4>
+                        <!-- use the user id
+                             sql to get into sleep table (- slept ... hours) and if 0, then :(
+                             sql to get into exercise table (- exercised ... hours ) anf if 0, then :(
+                             and continue
+                             refresh button that forces it to update -->
                 </div>
             </div>
         </div>
-        <?php
-        include 'footer.php'; ?>
+        <?php include 'footer.php'; ?>
 </body>
 </html>
 

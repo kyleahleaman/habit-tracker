@@ -52,7 +52,7 @@
 <body>
     <br><br><br><br>
     <div class = "container">
-        <form name = "register" method = "post" id = "register" action = "../surveyPage.html">
+        <form name = "register" method = "post" id = "register" action = "../processes/signup.php">
             <h1>Register</h1>
 
             <label for = "username">Username:</label><br>

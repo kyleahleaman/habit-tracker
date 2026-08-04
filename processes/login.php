@@ -22,7 +22,6 @@
     // print_r($result);
     // exit;
 
-    //Adjust variables based on survey questions
     if ($result->num_rows > 0){
         $row = $result->fetch_all(MYSQLI_ASSOC);
         // print_r($row);
@@ -30,6 +29,11 @@
         $_SESSION['loggedIn'] = 'YES';
         $_SESSION['username'] = $row[0]['username'];
         $_SESSION['coins'] = $row[0]['coins'];
+        $_SESSION['age'] = $row[0]['age'];
+        $_SESSION['sleep'] = $row[0]['sleep'];
+        $_SESSION['exercise'] = $row[0]['exercise'];
+        $_SESSION['screen'] = $row[0]['screen'];
+        $_SESSION['water'] = $row[0]['water'];
         $conn->close();
         header('location:../homepage.php');
     }else{

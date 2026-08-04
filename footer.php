@@ -16,31 +16,34 @@
         li a {
             display: block;
             color: #2a2b2e;
-            padding: 14px 26px;
+            padding: 14px 16px;
             text-decoration: none;
-            font-size: 17px;
-            
-            
+            font-size: 14px;
         }
 
         li a:hover {
             background-color: rgb(236, 193, 199);
         }
 
+        .w3-top,.w3-bottom{
+            z-index:1;overflow: hidden;left:0;}.w3-top{top:0}.w3-bottom{bottom:0}
+
+        nav {
+            width: 100%;
+        }
+
     </style>
 </head>
 <body>
-    <header>
+    <footer>
         <nav>
-            <ul>
-                <div class='w3-bottom'>
-                    <ul>
-                        <li><a href="aboutandpurpose.php">About Us</a></li>
-                    </ul>
-                </div>
-
-            </ul>
+            <div class='w3-bottom'>
+                <ul>
+                    <li><a href="aboutandpurpose.php">About Us</a></li>
+                    <li><a href="https://github.com/kyleahleaman/habit-tracker">Created by Emma Lang, Kyleah Leaman, Paige Hershey, and Sophia Banh</a></li>
+                </ul>
+            </div>
         </nav>
-    </header>
+    </footer>
 </body>
 </html>

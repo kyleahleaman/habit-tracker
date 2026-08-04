@@ -1,9 +1,10 @@
 <?php
 
-session_start();
+    session_start();
 
 
-$_SESSION["loggedIn"] = "YES";
+    $_SESSION["loggedIn"] = "YES";
 
-header("location:homepage.php");
+    header("location:homepage.php");
+
 ?>

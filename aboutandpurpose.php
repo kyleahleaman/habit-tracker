@@ -6,7 +6,12 @@ include "navbar.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Purpose</title>
-    <link rel="stylesheet" href="habit.css">
+    <style>
+        body {
+            background-color: #91c7b1;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+   
 </head>
 <body>
     <h1>Our Purpose</h1>
@@ -23,6 +28,7 @@ include "navbar.php";
 
 </body>
 </html>
+</style>
 
 <?php
 include "footer.php";

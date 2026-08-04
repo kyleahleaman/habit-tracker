@@ -2,12 +2,12 @@
     session_start();
     require_once('dbconfig.php');
 
-    $avatar = $_POST['character'];
-    $age = $_POST['age'];
-    $sleep = isset($_POST['sleep']);
-    $exercise = isset($_POST['exercise']);
-    $water = isset($_POST['water']);
-    $screen = isset($_POST['screen']);
+    $_SESSION["avatar"] = $_POST['character'];
+    $_SESSION["age"] = $_POST['age'];
+    $_SESSION["sleep"] = isset($_POST['sleep']);
+    $_SESSION["exercise"] = isset($_POST['exercise']);
+    $_SESSION["water"] = isset($_POST['water']);
+    $_SESSION["screen"] = isset($_POST['screen']);
 
     // connect to my database
     $conn = new mysqli($servername, $username, $password, $database);
@@ -17,14 +17,15 @@
         die("Connection failed: " . $conn->connect_error);
     }
     
+    //check if in database
     // prepare the SQL message
     $sql = "UPDATE users
-        SET avater = '{$avatar}',
-        age = '{$age}',
-        sleep = '{$sleep}',
-        exercise = '{$exercise}',
-        screen = '{$screen}',
-        water = '{$water}'
+        SET avatar = '{$_SESSION["avatar"]}',
+        age = '{$_SESSION["age"]}',
+        sleep = '{$_SESSION["sleep"]}',
+        exercise = '{$_SESSION["exercise"]}',
+        screen = '{$_SESSION["screen"]}',
+        water = '{$_SESSION["water"]}'
         WHERE username = '{$_SESSION["user"]}';";
 
     // send this SQL message

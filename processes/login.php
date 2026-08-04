@@ -27,19 +27,19 @@
         // print_r($row);
         // exit;
         $_SESSION['loggedIn'] = 'YES';
-        $_SESSION['username'] = $row[0]['username'];
+        $_SESSION['user'] = $row[0]['username'];
         $_SESSION['coins'] = $row[0]['coins'];
         $_SESSION['age'] = $row[0]['age'];
         $_SESSION['sleep'] = $row[0]['sleep'];
         $_SESSION['exercise'] = $row[0]['exercise'];
         $_SESSION['screen'] = $row[0]['screen'];
         $_SESSION['water'] = $row[0]['water'];
+        $_SESSION['avatar'] = $row[0]['avatar'];
         $conn->close();
         header('location:../homepage.php');
     }else{
         $_SESSION['loggedIn'] = 'NO';
-        $_SESSION['username'] = 'hacker';
-        $_SESSION['coins'] = 0;
+        $_SESSION['user'] = 'hacker';
         $conn->close();
         header('location:../index.php?message=Login failed.');
     }

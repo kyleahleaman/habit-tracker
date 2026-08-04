@@ -40,7 +40,6 @@
     <header>
         <nav>
             <ul>
-                <?PHP if($_SERVER["SERVER_ADDR"]=="127.0.0.1"){ ?>
                     <li><a href="/habit-tracker/homepage.php"><img src="/habit-tracker/images/home.png" width="75%"></a></li>
                     <li><a href="/habit-tracker/shop.php"><img src="/habit-tracker/images/shop.png" width="75%"></a></li>
                     <li><a href="/habit-tracker/profile.php"><img src="/habit-tracker/images/profile.png" width="75%"></a><li>
@@ -52,20 +51,6 @@
                         <a href="/habit-tracker/surveyPage.html">Habits</a>
                         <a href="/habit-tracker/processes/logout.php">Logout</a>
                     </div>
-
-
-                <?PHP }else{ ?>
-                    <li><a href="/homepage.php"><img src="/images/home.png" width="75%"></a></li>
-                    <li><a href="/shop.php"><img src="/images/shop.png" width="75%"></a></li>
-                    <li><a href="/profile.php"><img src="/images/profile.png" width="75%"></a><li>
-
-                    <div class="content-hidden">
-                        <a href="/profile.php">Profile</a>
-                        <a href="/shop.php">Shop</a>
-                        <a href="/surveyPage.html">Habits</a>
-                        <a href="/processes/logout.php">Logout</a>
-                    </div>
-                <?PHP }; ?>
             </ul>
         </nav>
     </header>

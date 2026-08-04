@@ -11,7 +11,7 @@
 <h1>Initial Survey</h1>
 <h2>Fill out this form to continue on to the Habit Tracker!</h2>
 
-<form id="initial_survey" action = "index.php?message=Thank you for signing up. Please log in.">
+<form id="initial_survey" method = "post" action = "processes/survey.php">
 
 
   
@@ -41,25 +41,23 @@
     <!-- habit options -->
       <h3>What habit(s) do you want to improve?</h3>
 
-        <input type="checkbox" name="habits" id="sleep" value="Sleep">
+        <input type="checkbox" name="sleep" id="sleep" value="Sleep">
             <label for="sleep">Sleep</label><br>
 
-        <input type="checkbox" name="habits" id="exercise" value="Exercise">
+        <input type="checkbox" name="exercise" id="exercise" value="Exercise">
             <label for="exercise">Exercise</label><br>
 
-        <input type="checkbox" name="habits" id="water" value="Drinking Water">
+        <input type="checkbox" name="water" id="water" value="Drinking Water">
             <label for="water">Drinking Water</label><br>
 
-        <input type="checkbox" name="habits" id="screen" value="Screen Time">
+        <input type="checkbox" name="screen" id="screen" value="Screen Time">
             <label for="screen">Screen Time</label><br>
         
         <hr>
     <!-- submit -->
      <br>
         <h2><input type="submit" value="Submit Survey"></h2>
-
-
-</form>    
+</form>  
 </body>
 </html>
 

@@ -25,6 +25,26 @@
             height: 97%;
             margin-top: 10px;
         }
+
+        .statsdiv {
+            background-color: white;
+            border-radius: 15px;
+            padding: 10px;
+            margin-right: 40px;
+            height: 400px;
+            overflow: auto;
+            box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+        }
+
+        .buttonsdiv {
+            background-color: white;
+            border-radius: 15px;
+            padding: 10px;
+            margin-left: 40px;
+            height: 400px;
+            overflow: auto;
+            box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body>
@@ -41,7 +61,9 @@
         <div class="flex-container">
             <div class="buttons">
                 <br><br><br>
-                BUTTONS GO HERE
+                <div class="buttonsdiv">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
             </div>
 
             <div class="animal">
@@ -50,7 +72,9 @@
 
             <div class="stats">
                 <br><br><br>
-                STATS GO HERE
+                <div class="statsdiv">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
             </div>
         </div>
         <?php

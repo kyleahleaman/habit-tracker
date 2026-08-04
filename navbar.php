@@ -39,6 +39,20 @@
             display: flex;
             justify-content: flex-end;
         }
+
+        img {
+            margin-left: 2px;
+        }
+
+        button {
+            background-color: #91c7b1;
+            border: none;
+        }
+
+        button:hover {
+            background-color: rgb(236, 193, 199);
+        }
+
     </style>
 </head>
 <body>
@@ -46,11 +60,11 @@
         <nav>
             <ul>
                 <?PHP if($_SERVER["SERVER_ADDR"]=="127.0.0.1"){ ?>
-                    <li><a href="/habit-tracker/homepage.php"><img src="/habit-tracker/images/home.png" width="75%"></a></li>
-                    <li><a href="/habit-tracker/shop/shop.php"><img src="/habit-tracker/images/shop.png" width="75%"></a></li>
+                    <li><a href="/habit-tracker/homepage.php"><img src="/habit-tracker/images/home.png" width="70%" style="margin-top: 2px;"></a></li>
+                    <li><a href="/habit-tracker/shop/shop.php"><img src="/habit-tracker/images/shop.png" width="70%" style="margin-top: 2px;"></a></li>
 
                     <div class="left">
-                        <li><a href="/habit-tracker/profile.php"><img src="/habit-tracker/images/profile.png" width="75%"></a></li>
+                        <li><a href="/habit-tracker/profile.php"><img src="/habit-tracker/images/profile.png" width="66%" style="margin-left: 7px;"></a></li>
                         <button type="button" class="collapsible">▼</button>
 
                         <div class="content-hidden">

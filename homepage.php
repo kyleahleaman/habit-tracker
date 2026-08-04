@@ -39,11 +39,19 @@
         ?>
 
         <div class="flex-container">
-            <div class="buttons">Column 1</div>
-            <div class="animal">
-                <img src="images/penguin.png" class="penguin">
+            <div class="buttons">
+                <br><br><br>
+                BUTTONS GO HERE
             </div>
-            <div class="stats">Column 3</div>
+
+            <div class="animal">
+                <img src="images/penguin.png" class="penguin"> <!--  PLACEHOLDER -->
+            </div>
+
+            <div class="stats">
+                <br><br><br>
+                STATS GO HERE
+            </div>
         </div>
         <?php
         include 'footer.php'; ?>

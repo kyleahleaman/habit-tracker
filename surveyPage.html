@@ -7,56 +7,59 @@
     <link rel="stylesheet" href="surveyPage.css">
 </head>
 <body>
-   
-    <h1>Initial Survey</h1>
-    <h2>Fill out this form to continue on to the Habit Tracker!</h2>
+    <div class="split-container">
 
-    <form id="initial_survey" method = "post" action = "processes/survey.php">
+        <div class="picture"></div>
 
-        <!-- choose your character -->
-        <h3>Choose your avatar!</h3>
-            <input type="radio" name="character" id="penguin" value="penguin">
-                <label for="penguin">Penguin</label><br>
+        <div class="form-part">
+            <br>
+            <h2>Fill out this form to continue on to the Habit Tracker with your new habits!</h2>
+            <br>
 
-            <input type="radio" name="character" id="narwhal" value="narwhal">
-                <label for="narwhal">Narwhal</label><br>
+            <form id="initial_survey" method = "post" action = "processes/survey.php">
 
-            <input type="radio" name="character" id="dog" value="dog">
-                <label for="dog">Dog</label><br>
+                <!-- choose your character -->
+                <h4>Choose your avatar!</h4>
+                    <input type="radio" name="character" id="penguin" value="penguin">
+                        <label for="penguin">Penguin</label><br>
 
-            <input type="radio" name="character" id="cat" value="cat">
-                <label for="cat">Cat</label><br>
+                    <input type="radio" name="character" id="narwhal" value="narwhal">
+                        <label for="narwhal">Narwhal</label><br>
 
-            <hr>
+                    <input type="radio" name="character" id="orangutan" value="orangutan">
+                        <label for="dog">Orangutan</label><br>
 
-        <!-- age -->
-        <h3>What's your age?</h3>
-            <input type="number" id="age" name="age" min="0" max="120">
+                    <input type="radio" name="character" id="raccoon" value="raccoon">
+                        <label for="cat">Raccoon</label>
 
-            <hr>
+                    <br><br>
 
-        <!-- habit options -->
-        <h3>What habit(s) do you want to improve?</h3>
+                <!-- age -->
+                <h4>What's your age?</h4>
+                    <input type="number" id="age" name="age" min="0" max="120">
 
-            <input type="checkbox" name="sleep" id="sleep" value="Sleep">
-                <label for="sleep">Sleep</label><br>
+                <br><br>
 
-            <input type="checkbox" name="exercise" id="exercise" value="Exercise">
-                <label for="exercise">Exercise</label><br>
+                <!-- habit options -->
+                <h4>What habit(s) do you want to improve?</h4>
 
-            <input type="checkbox" name="water" id="water" value="Drinking Water">
-                <label for="water">Drinking Water</label><br>
+                    <input type="checkbox" name="sleep" id="sleep" value="Sleep">
+                        <label for="sleep">Sleep</label><br>
 
-            <input type="checkbox" name="screen" id="screen" value="Screen Time">
-                <label for="screen">Screen Time</label><br>
-            
-            <hr>
-        <!-- submit -->
-         <br>
-            <h2><button type="submit">Submit</button></h2>
-    </form>
+                    <input type="checkbox" name="exercise" id="exercise" value="Exercise">
+                        <label for="exercise">Exercise</label><br>
+
+                    <input type="checkbox" name="water" id="water" value="Drinking Water">
+                        <label for="water">Drinking Water</label><br>
+
+                    <input type="checkbox" name="screen" id="screen" value="Screen Time">
+                        <label for="screen">Screen Time</label>
+                    
+                    <br><br>
+                <!-- submit -->
+                    <button type="submit">Submit</button><br>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
-
-
-

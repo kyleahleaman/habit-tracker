@@ -9,7 +9,8 @@
             gap: 50px; /* Optional: Adds spacing between columns */
         }
         .animal {
-            width: 50vw
+            width: 50vw;
+            height: 82vh;
         }
 
         .buttons {
@@ -20,6 +21,10 @@
             width: 25vw;
         }
 
+        .penguin {
+            height: 97%;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -34,11 +39,11 @@
         ?>
 
         <div class="flex-container">
-            <div>Column 1</div>
+            <div class="buttons">Column 1</div>
             <div class="animal">
-                <img src="images/penguin.png">
+                <img src="images/penguin.png" class="penguin">
             </div>
-            <div>Column 3</div>
+            <div class="stats">Column 3</div>
         </div>
         <?php
         include 'footer.php'; ?>

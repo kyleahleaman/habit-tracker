@@ -32,8 +32,13 @@
 
         .content-hidden{
             display: none;
+            flex-direction: column;
         }
 
+        .left {
+            display: flex;
+            justify-content: flex-end;
+        }
     </style>
 </head>
 <body>
@@ -42,29 +47,34 @@
             <ul>
                 <?PHP if($_SERVER["SERVER_ADDR"]=="127.0.0.1"){ ?>
                     <li><a href="/habit-tracker/homepage.php"><img src="/habit-tracker/images/home.png" width="75%"></a></li>
-                    <li><a href="/habit-tracker/shop.php"><img src="/habit-tracker/images/shop.png" width="75%"></a></li>
-                    <li><a href="/habit-tracker/profile.php"><img src="/habit-tracker/images/profile.png" width="75%"></a><li>
-                    <button type="button" class="collapsible">▼</button>
+                    <li><a href="/habit-tracker/shop/shop.php"><img src="/habit-tracker/images/shop.png" width="75%"></a></li>
 
-                    <div class="content-hidden">
-                        <a href="/habit-tracker/profile.php">Profile</a>
-                        <a href="/habit-tracker/shop.php">Shop</a>
-                        <a href="/habit-tracker/surveyPage.html">Habits</a>
-                        <a href="/habit-tracker/processes/logout.php">Logout</a>
+                    <div class="left">
+                        <li><a href="/habit-tracker/profile.php"><img src="/habit-tracker/images/profile.png" width="75%"></a></li>
+                        <button type="button" class="collapsible">▼</button>
+
+                        <div class="content-hidden">
+                            <ul>
+                                <li><a href="/habit-tracker/profile.php">Profile</a><br></li>
+                                <li><a href="/habit-tracker/shop/shop.php">Shop</a><br></li>
+                                <li><a href="/habit-tracker/surveyPage.html">Habits</a><br></li>
+                                <li><a href="/habit-tracker/processes/logout.php">Logout</a><br></li>
+                            </ul>
+                        </div>
                     </div>
-
-
                 <?PHP }else{ ?>
                     <li><a href="/homepage.php"><img src="/images/home.png" width="75%"></a></li>
-                    <li><a href="/shop.php"><img src="/images/shop.png" width="75%"></a></li>
-                    <li><a href="/profile.php"><img src="/images/profile.png" width="75%"></a><li>
-                    <button type="button" class="collapsible">▼</button>
+                    <li><a href="/shop/shop.php"><img src="/images/shop.png" width="75%"></a></li>
+                    <li><a href="/profile.php"><img src="/images/profile.png" width="75%"></a></li>
+                    <button type="button" class="collapsible">▼</button><li>
 
                     <div class="content-hidden">
-                        <a href="/profile.php">Profile</a>
-                        <a href="/shop.php">Shop</a>
-                        <a href="/surveyPage.html">Habits</a>
-                        <a href="/processes/logout.php">Logout</a>
+                        <ul>
+                            <li><a href="/profile.php">Profile</a></li>
+                            <li><a href="/shop/shop.php">Shop</a></li>
+                            <li><a href="/surveyPage.html">Habits</a></li>
+                            <li><a href="/processes/logout.php">Logout</a></li>
+                        </ul>
                     </div>
                 <?PHP }; ?>
             </ul>
@@ -78,10 +88,10 @@
         for (i = 0; i < coll.length; i++) {
             coll[i].addEventListener("click", function() {this.classList.toggle("active");
                 var content = this.nextElementSibling;
-                if (content.style.display === "block") {
+                if (content.style.display === "flex") {
                     content.style.display = "none";
                 } else {
-                    content.style.display = "block";
+                    content.style.display = "flex";
                 }});}
     </script>
 </html>

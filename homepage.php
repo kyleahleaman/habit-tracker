@@ -6,12 +6,20 @@
     <style>
         .flex-container {
             display: flex; /* Aligns children horizontally */
-            gap: 10px; /* Optional: Adds spacing between columns */
+            gap: 50px; /* Optional: Adds spacing between columns */
+        }
+        .animal {
+            width: 50vw
         }
 
-        .flex-container > div {
-            flex: 1; /* Makes all three columns take up equal width */
+        .buttons {
+            width: 25vw;
         }
+
+        .stats {
+            width: 25vw;
+        }
+
     </style>
 </head>
 <body>

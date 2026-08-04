@@ -4,6 +4,7 @@
 
 
     $_SESSION["loggedIn"] = "YES";
+    $_SESSION["user"] = 'apple';
 
     header("location:homepage.php");
 

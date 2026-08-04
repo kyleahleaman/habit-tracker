@@ -12,6 +12,8 @@
 
         li {
             float: left;
+            justify-content: center;
+            align-items: center;
         }
 
         li a {
@@ -20,6 +22,8 @@
             padding: 14px 26px;
             text-decoration: none;
             font-size: 18px;
+            justify-content: center;
+            align-items: center;
         }
 
         li a:hover {
@@ -27,7 +31,7 @@
         }
 
         .content-hidden{
-              display: none;
+            display: none;
         }
 
     </style>
@@ -39,7 +43,7 @@
                 <?PHP if($_SERVER["SERVER_ADDR"]=="127.0.0.1"){ ?>
                     <li><a href="/habit-tracker/homepage.php"><img src="/habit-tracker/images/home.png" width="75%"></a></li>
                     <li><a href="/habit-tracker/shop.php"><img src="/habit-tracker/images/shop.png" width="75%"></a></li>
-                    <li><a href="/habit-tracker/profile.php"><img src="/habit-tracker/images/profile.png" width="25%"><?php $_SESSION["user"]; ?></a><li>
+                    <li><a href="/habit-tracker/profile.php"><img src="/habit-tracker/images/profile.png" width="75%"></a><li>
                     <button type="button" class="collapsible">▼</button>
 
                     <div class="content-hidden">
@@ -53,7 +57,7 @@
                 <?PHP }else{ ?>
                     <li><a href="/homepage.php"><img src="/images/home.png" width="75%"></a></li>
                     <li><a href="/shop.php"><img src="/images/shop.png" width="75%"></a></li>
-                    <li><a href="/profile.php"><img src="/images/profile.png" width="25%"><?php $_SESSION["user"]; ?></a><li>
+                    <li><a href="/profile.php"><img src="/images/profile.png" width="75%"></a><li>
 
                     <div class="content-hidden">
                         <a href="/profile.php">Profile</a>

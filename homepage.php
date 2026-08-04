@@ -1,11 +1,9 @@
 <?php
-    session_start();
 
+    include "navbar.php";
     if($_SESSION["loggedIn"] == "NO"){
         exit;
     }
-
-    include "navbar.php";
     include 'footer.php';
     
 ?>

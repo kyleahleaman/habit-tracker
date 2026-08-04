@@ -11,7 +11,7 @@ include "navbar.php";
             background-color: #91c7b1;
             font-family: Arial, Helvetica, sans-serif;
         }
-   
+   </style>
 </head>
 <body>
     <h1>Our Purpose</h1>
@@ -28,7 +28,6 @@ include "navbar.php";
 
 </body>
 </html>
-</style>
 
 <?php
 include "footer.php";

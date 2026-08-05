@@ -7,6 +7,13 @@
             body {
                 background-color: #91c7b1;
                 font-family: Arial, Helvetica, sans-serif;
+                margin: 0px;
+            }
+
+            .split-container {
+                display: flex;
+                width: 100%;
+                height: 100vh;
             }
 
             form {
@@ -14,7 +21,7 @@
                 border-radius: 15px;
                 box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
                 padding: 20px;
-                width: 30%;
+                width: 50%;
                 background-color: white;
                 margin: auto;
             }
@@ -34,7 +41,7 @@
             }
 
             button {
-                background-color: #91c7b1;
+                background-color: #98bcdc;
                 color: white;
                 padding: 14px 20px;
                 margin: 8px 0;
@@ -47,25 +54,48 @@
             button:hover {
                 opacity: 0.8;
             }
+
+            .form-part {
+                flex: 1;
+                background-color: #98bcdc;
+                padding: 40px 20px;
+                overflow-y: auto; 
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                overflow-y: auto;
+                align-items: center;
+            }
+
+            .picture {
+                flex: 1;
+                background-image: url(../sky.jpg);
+                background-size: cover; 
+                background-position: center;
+                background-repeat: no-repeat;
+            }
         </style>
 </head>
 <body>
-    <br><br><br><br>
-    <div class = "container">
-        <form name = "register" method = "post" id = "register" action = "../processes/signup.php">
-            <h1>Register</h1>
+    <div class = "split-container">
+        <div class="picture"></div>
 
-            <label for = "username">Username:</label><br>
-            <input type = "text" name = "username" id = "username"><br><br>
+        <div class="form-part">
+            <form name = "register" method = "post" id = "register" action = "../processes/signup.php">
+                <h1>Register</h1>
 
-            <label for = "password">New Password:</label><br>
-            <input type = "password" name = "password" id = "password"><br><br>
+                <label for = "username">Username:</label><br>
+                <input type = "text" name = "username" id = "username"><br><br>
 
-            <label for = "cpassword">Confirm Password:</label><br>
-            <input type = "password" name = "cpassword" id = "cpassword"><br><br>
+                <label for = "password">New Password:</label><br>
+                <input type = "password" name = "password" id = "password"><br><br>
 
-            <button onclick = "registerUser(event)">Register</button>
-        </form>
+                <label for = "cpassword">Confirm Password:</label><br>
+                <input type = "password" name = "cpassword" id = "cpassword"><br><br>
+
+                <button onclick = "registerUser(event)">Register</button>
+            </form>
+        </div>
     </div>
 
     <script>

@@ -41,6 +41,7 @@
                 <ul>
                     <li><a href="aboutGallery.php">About Us</a></li>
                     <li><a href="https://github.com/kyleahleaman/habit-tracker">Created by Emma Lang, Kyleah Leaman, Paige Hershey, and Sophia Banh</a></li>
+                    <li><a href="research.html">Sources</a></li>
                 </ul>
             </div>
         </nav>

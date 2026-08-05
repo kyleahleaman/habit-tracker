@@ -143,8 +143,6 @@
 
         <script>
             
-            
-
             function testSleep() {
                 event.preventDefault();
                 let sleep = document.getElementById("shours").value;

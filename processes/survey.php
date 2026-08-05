@@ -15,8 +15,7 @@
     
     // prepare the SQL messages
     $sql = "UPDATE users
-        SET avatar = '{$_SESSION["avatar"]}',
-        age = {$_SESSION["age"]}
+        SET avatar = '{$_SESSION["avatar"]}', age = {$_SESSION["age"]}
         WHERE username = '{$_SESSION["user"]}';";
 
     $sql2 = "UPDATE stats

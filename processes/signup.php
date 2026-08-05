@@ -26,6 +26,9 @@
         header('location:../processes/register.php?message=Username is already taken.');
     }
 
+    $sql = "SELECT * from users where username='{$_SESSION['user']}';";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
     $result = $stmt->get_result();
     $row = $result->fetch_all(MYSQLI_ASSOC);
     $id = $row[0]['id'];

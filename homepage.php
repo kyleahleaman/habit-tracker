@@ -92,7 +92,7 @@
                     <h3>Input your stats here!</h3>
                     <div class="bsections">
                         <h4>Sleep</h4>
-                        <input type = "number" name = "shours" id = "shours" max="24">
+                        <input type = "number" name = "shours" id = "shours" max="24" min="0">
                         <span>hours</span><br>
                         <button onclick = "testSleep(event)">Add to today's stats!</button>
                     </div>   
@@ -100,7 +100,7 @@
                     <div class="bsections">
                         <h4>Exercise</h4>
                         <form>
-                            <input type = "number" name = "ehours" id = "ehours" max="10">
+                            <input type = "number" name = "ehours" id = "ehours" max="10" min="0">
                             <span>hours</span><br>
                             <button onclick = "addExercise(event)">Add to today's stats!</button>
                         </form>
@@ -108,14 +108,14 @@
 
                     <div class="bsections">
                         <h4>Water</h4>
-                        <input type = "number" name = "wounces" id = "wounces" max="99">
+                        <input type = "number" name = "wounces" id = "wounces" max="99" min="0">
                         <span>ounces</span><br>
                         <button onclick = "addWater(event)">Add to today's stats!</button>
                     </div>
 
                     <div class="bsections">
                         <h4>Screen Time</h4>
-                        <input type = "number" name = "thours" id = "thours" max="24">
+                        <input type = "number" name = "thours" id = "thours" max="24" min="0">
                         <span>hours</span><br>
                         <button onclick = "addScreenTime(event)">Add to today's stats!</button>
                     </div>
@@ -142,29 +142,34 @@
         <?php include 'footer.php'; ?>
 
         <script>
-            let sleep = document.getElementById("shours").value;
-            let exercise = document.getElementById("ehours").value;
-            let water = document.getElementById("wounces").value;
-            let screen = document.getElementById("thours").value;
+            
+            
 
             function testSleep() {
                 event.preventDefault();
-                alert(`Added ${sleep} to your stats!`);
+                let sleep = document.getElementById("shours").value;
+                alert(`Added ${sleep} hours to your stats!`);
                 window.location.reload();
             }
 
             function addExercise() {
-                alert('exercise');
+                event.preventDefault();
+                let exercise = document.getElementById("ehours").value;
+                alert(`Added ${exercise} hours to your stats!`);
                 window.location.reload();
             }
 
             function addWater() {
-                alert('water');
+                event.preventDefault();
+                let water = document.getElementById("wounces").value;
+                alert(`Added ${water} ounces to your stats!`);
                 window.location.reload();
             }
 
             function addScreenTime() {
-                alert('screen time');
+                event.preventDefault();
+                let screen = document.getElementById("thours").value;
+                alert(`Added ${screen} hours to your stats!`);
                 window.location.reload();
             }
         </script>

@@ -35,9 +35,9 @@
         .statsdiv {
             background-color: #91c7b1;
             border-radius: 15px;
-            padding: 5px;
+            padding: 10px;
             margin-right: 40px;
-            height: 425px;
+            height: 500px;
             overflow: auto;
             box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
         }
@@ -47,7 +47,7 @@
             border-radius: 15px;
             padding: 10px;
             margin-left: 40px;
-            height: 425px;
+            height: 415px;
             overflow: auto;
             box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
         }
@@ -126,10 +126,52 @@
                 <img src="images/penguin.png" class="penguin"> <!--  PLACEHOLDER -->
             </div>
 
+
+            <?php 
+                require_once('processes/dbconfig.php');
+                $conn = new mysqli($servername, $username, $password, $database);
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                $sql = "SELECT * FROM stats where username='{$_SESSION['user']}';";
+                $stmt = $conn->prepare($sql);
+                $stmt->execute();
+                $result = $stmt->get_result();
+
+                $rows = $result->fetch_all(MYSQLI_ASSOC);
+            ?> 
+
             <div class="stats">
                 <br><br><br>
                 <div class="statsdiv">
                     <h4>Today you...</4>
+                            <?php
+                                for ($i = 0; $i < count($rows); $i++){
+                                    $coinsS = $rows[$i]['coins'];
+                                    $ageS = $rows[$i]['age'];
+                                    $sleepS = $rows[$i]['sleep'];
+                                    $exerciseS = $rows[$i]['exercise'];
+                                    $waterS = $rows[$i]['water'];
+                                    $screenS = $rows[$i]['screen'];
+                                }
+                            ?>
+
+                        <div class="bsections">
+                            <h4> - have <?php echo $coinsS; ?> coins!</h4>
+                        </div>
+
+                        <div class="bsections">
+                            <h4> - slept <?php echo $sleepS; ?> hours of VARAIBLE!</h4>
+                        </div>
+
+                        <div class="bsections">
+                            <h4> - exercised <?php echo $exerciseS; ?> hours of VARIABLE!</h4>
+                        </div>
+
+                        <div class="bsections">
+                            <h4> - had <?php echo $screenS; ?> hours of screen time!</h4>
+                        </div>
                         <!-- use the user id
                              sql to get into sleep table (- slept ... hours) and if 0, then :(
                              sql to get into exercise table (- exercised ... hours ) anf if 0, then :(
@@ -139,7 +181,7 @@
             </div>
         </div>
 
-        <?php include 'footer.php'; ?>
+        <?php $conn->close(); include 'footer.php'; ?>
 
         <script>
             

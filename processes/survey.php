@@ -4,6 +4,7 @@
 
     $_SESSION["avatar"] = $_POST['character'];
     $_SESSION["age"] = $_POST['age'];
+    $_SESSION["avatar_name"] = $_POST['name'];
 
     // connect to my database
     $conn = new mysqli($servername, $username, $password, $database);
@@ -15,7 +16,7 @@
     
     // prepare the SQL messages
     $sql = "UPDATE users
-        SET avatar = '{$_SESSION["avatar"]}', age = {$_SESSION["age"]}
+        SET avatar = '{$_SESSION["avatar"]}', age = {$_SESSION["age"]}, avatar_name = '{$_SESSION["avatar_name"]}'
         WHERE username = '{$_SESSION["user"]}';";
 
     $sql2 = "UPDATE stats

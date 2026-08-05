@@ -30,6 +30,7 @@
         $_SESSION['user'] = $row[0]['username'];
         $_SESSION['coins'] = $row[0]['coins'];
         $_SESSION['avatar'] = $row[0]['avatar'];
+        $_SESSION['avatar_name'] = $row[0]['avatar_name']
 
         $conn->close();
         header('location:../homepage.php');

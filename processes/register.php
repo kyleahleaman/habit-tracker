@@ -77,11 +77,20 @@
         </style>
 </head>
 <body>
+    <?php
+        if(isset($_GET["message"])){
+            $message = $_GET["message"] . "<BR><BR>";
+        }else{
+            $message = "";
+        }
+    ?>
+
     <div class = "split-container">
         <div class="picture"></div>
 
         <div class="form-part">
             <form name = "register" method = "post" id = "register" action = "../processes/signup.php">
+                <font color = "red"><?php echo $message; ?></font>
                 <h1>Register</h1>
 
                 <label for = "username">Username:</label><br>

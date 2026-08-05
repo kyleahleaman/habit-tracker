@@ -1,8 +1,8 @@
 <?php
     session_start();
 
-    $_SESSION["user"] = $_POST['username'];
-    $_SESSION["pass"] = SHA2(CONCAT('salt', '{$_POST["password"]}', 'pepper'), 0);
+    $user = $_POST['username'];
+    $pass = $_POST["password"];
 
     // load db config
     require_once('dbconfig.php');
@@ -14,10 +14,10 @@
     }
 
     // best sql to extra protect the data
-    $sql = "SELECT * from users where username = ? and bestpassword = ?;";
+    $sql = "SELECT * from users where username = ? and bestpassword = SHA2(CONCAT('salt', ?, 'pepper'), 0);";
 
     $stmt = $conn->prepare($sql);
-    $stmt->execute([$_SESSION["user"], $_SESSION["pass"]]);
+    $stmt->execute([$user, $pass]);
     $result = $stmt->get_result();
     // print_r($result);
     // exit;
@@ -29,11 +29,6 @@
         $_SESSION['loggedIn'] = 'YES';
         $_SESSION['user'] = $row[0]['username'];
         $_SESSION['coins'] = $row[0]['coins'];
-        $_SESSION['age'] = $row[0]['age'];
-        $_SESSION['sleep'] = $row[0]['sleep'];
-        $_SESSION['exercise'] = $row[0]['exercise'];
-        $_SESSION['screen'] = $row[0]['screen'];
-        $_SESSION['water'] = $row[0]['water'];
         $_SESSION['avatar'] = $row[0]['avatar'];
 
         $conn->close();

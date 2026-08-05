@@ -2,8 +2,8 @@
     session_start();
     require_once('dbconfig.php');
 
-    $_SESSION["user"] = $_POST['username'];
-    $_SESSION["pass"] = SHA2(CONCAT('salt', '{$_POST["password"]}', 'pepper'), 0);
+    $_SESSION['user'] = $_POST['username'];
+    $pass = $_POST["password"];
 
     // connect to my database
     $conn = new mysqli($servername, $username, $password, $database);
@@ -14,13 +14,17 @@
     }
 
     // prepare the SQL message
-    $sql = "INSERT INTO users(username, bestpassword, coins, approved, createdOn) 
-    VALUES ('{$_SESSION["user"]}', SHA2(CONCAT('salt', '{$_SESSION["pass"]}', 'pepper'), 0), 0, 1, NOW());";
+    $sql = "INSERT INTO users(username, bestpassword, coins, approved, createdOn)
+    Values ('{$_SESSION['user']}', SHA2(CONCAT('salt','{$pass}','pepper'),0), 0, 1, NOW());";
 
     // send this SQL message
-    $stmt = $conn->prepare($sql);
-    $stmt->execute();
-    $conn->close();
-
-    header('location:../surveyPage.html');
+    try{
+         $stmt = $conn->prepare($sql);
+         $stmt->execute();
+         $conn->close();
+         header('location:../surveyPage.html');
+    }catch(mysqli_sql_exception $e){
+        $conn->close();
+        header('location:../processes/register.php?message=Username is already taken.');
+    }
 ?>

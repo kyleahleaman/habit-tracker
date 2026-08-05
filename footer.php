@@ -19,6 +19,7 @@
             padding: 14px 16px;
             text-decoration: none;
             font-size: 14px;
+            font-weight: bold;
         }
 
         li a:hover {

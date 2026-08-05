@@ -242,28 +242,32 @@
                 event.preventDefault();
                 let sleep = document.getElementById("shours").value;
                 alert(`Added ${sleep} hours to your stats!`);
-                window.location.reload();
+
+                window.location.href = "updates/sleep.php?sleep=" + sleep;
             }
 
             function addExercise() {
                 event.preventDefault();
                 let exercise = document.getElementById("ehours").value;
                 alert(`Added ${exercise} hours to your stats!`);
-                window.location.reload();
+
+                window.location.href = "updates/exercise.php?exercise=" + exercise;
             }
 
             function addWater() {
                 event.preventDefault();
                 let water = document.getElementById("wounces").value;
                 alert(`Added ${water} ounces to your stats!`);
-                window.location.reload();
+
+                window.location.href = "updates/water.php?water=" + water;
             }
 
             function addScreenTime() {
                 event.preventDefault();
                 let screen = document.getElementById("thours").value;
                 alert(`Added ${screen} hours to your stats!`);
-                window.location.reload();
+
+                window.location.href = "updates/screen.php?screen=" + screen;
             }
 
             function resetDay() {

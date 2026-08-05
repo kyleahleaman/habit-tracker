@@ -35,6 +35,7 @@
         $_SESSION['screen'] = $row[0]['screen'];
         $_SESSION['water'] = $row[0]['water'];
         $_SESSION['avatar'] = $row[0]['avatar'];
+
         $conn->close();
         header('location:../homepage.php');
     }else{

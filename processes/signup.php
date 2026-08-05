@@ -3,8 +3,7 @@
     require_once('dbconfig.php');
 
     $_SESSION["user"] = $_POST['username'];
-    $pass = $_POST['password'];
-    $cpass = $_POST['cpassword'];
+    $_SESSION["pass"] = SHA2(CONCAT('salt', '{$_POST["password"]}', 'pepper'), 0);
 
     // connect to my database
     $conn = new mysqli($servername, $username, $password, $database);
@@ -16,13 +15,12 @@
 
     // prepare the SQL message
     $sql = "INSERT INTO users(username, bestpassword, coins, approved, createdOn) 
-    VALUES ('{$_SESSION["user"]}', SHA2(CONCAT('salt', '{$pass}', 'pepper'), 0), 0, 1, NOW());";
+    VALUES ('{$_SESSION["user"]}', SHA2(CONCAT('salt', '{$_SESSION["pass"]}', 'pepper'), 0), 0, 1, NOW());";
 
     // send this SQL message
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $conn->close();
 
-    header('location:../surveyPage.html')
-
+    header('location:../surveyPage.html');
 ?>

@@ -17,7 +17,6 @@
         die("Connection failed: " . $conn->connect_error);
     }
     
-    //check if in database
     // prepare the SQL message
     $sql = "UPDATE users
         SET avatar = '{$_SESSION["avatar"]}',
@@ -31,8 +30,26 @@
     // send this SQL message
     $stmt = $conn->prepare($sql);
     $stmt->execute();
+
+    //add habits
+    $sql = "SELECT * from users where username = '{$_SESSION["user"]}' AND bestpassword = '{$_SESSION["pass"]}';";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+
+    if($row[0]['sleep'] == 1){
+        
+    }
+    if($row[0]['exercise'] == 1){
+        $sql2 = ""
+    }
+    if($row[0]['screen'] == 1){
+        $sql2 = ""
+    }
+    if($row[0]['water'] == 1){
+        $sql2 = ""
+    }
+
     $conn->close();
 
-    header('location:../index.php?message=Thank you for signing up. Please log in.')
-
+    header('location:../index.php?message=Please log in.');
 ?>

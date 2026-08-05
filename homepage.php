@@ -39,12 +39,24 @@
         .buttonsdiv {
             background-color: white;
             border-radius: 15px;
-            padding: 5px;
+            padding: 10px;
             margin-left: 40px;
             height: 425px;
             overflow: auto;
             box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
         }
+
+        .buttonsdiv button {
+            border-radius: 10px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        /* h4 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        } */
+
     </style>
 </head>
 <body>
@@ -62,7 +74,28 @@
             <div class="buttons">
                 <br><br><br>
                 <div class="buttonsdiv">
-                    <h4>Exercise</h4>
+                    <div class="bsections">
+                        <h4>Sleep</h4>
+                        <button onclick = "testSleep(event)">Add to today's stats!</button>
+                    </div>   
+
+                    <div class="bsections">
+                        <h4>Exercise</h4>
+                        <form>
+                            <input type = "text" name = "ehours" id = "ehours">
+                            <button onclick = "addExercise(event)">Add to today's stats!</button>
+                        </form>
+                    </div>
+
+                    <div class="bsections">
+                        <h4>Water</h4>
+                        <button onclick = "addWater(event)">Add to today's stats!</button>
+                    </div>
+
+                    <div class="bsections">
+                        <h4>Screen Time</h4>
+                        <button onclick = "addScreenTime(event)">Add to today's stats!</button>
+                    </div>
                 </div>
             </div>
 
@@ -83,6 +116,28 @@
             </div>
         </div>
         <?php include 'footer.php'; ?>
+        <script>
+
+            function testSleep() {
+                alert('sleep');
+                window.location.reload();
+            }
+
+            function addExercise() {
+                alert('exercise');
+                window.location.reload();
+            }
+
+            function addWater() {
+                alert('water');
+                window.location.reload();
+            }
+
+            function addScreenTime() {
+                alert('screen time');
+                window.location.reload();
+            }
+        </script>
 </body>
 </html>
 

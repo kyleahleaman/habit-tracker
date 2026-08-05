@@ -3,7 +3,7 @@
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
-        }
+        } 
 
         ul {
             list-style-type: none;

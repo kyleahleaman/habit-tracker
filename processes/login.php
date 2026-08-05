@@ -1,8 +1,8 @@
 <?php
     session_start();
 
-    $user = $_POST['username'];
-    $pass = $_POST['password'];
+    $_SESSION["user"] = $_POST['username'];
+    $_SESSION["pass"] = SHA2(CONCAT('salt', '{$_POST["password"]}', 'pepper'), 0);
 
     // load db config
     require_once('dbconfig.php');
@@ -14,10 +14,10 @@
     }
 
     // best sql to extra protect the data
-    $sql = "SELECT * from users where username = ? and bestpassword = SHA2(CONCAT('salt', ?, 'pepper'), 0);";
+    $sql = "SELECT * from users where username = ? and bestpassword = ?;";
 
     $stmt = $conn->prepare($sql);
-    $stmt->execute([$user, $pass]);
+    $stmt->execute([$_SESSION["user"], $_SESSION["pass"]]);
     $result = $stmt->get_result();
     // print_r($result);
     // exit;

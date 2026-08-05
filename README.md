@@ -5,3 +5,5 @@ Habit Tracker is a website created by Emma Lang, Kyleah Leaman, Paige Hershey, a
 The purpose of this website is to provide people with the motivation to build meaningful and lasting habits through engaging with an animal of your choice.
 
 The painting, "From Jerusalem" by John Singer Sargent, displayed on the login, register, and survey pages was sourced from The Met's Free Digital Library. Shop item photos were sourced from royalty free collections, while some animals were inspired by Jellycat stuffed animals. All other images were sourced from Canva's free library.
+
+"From Jerusalem" by John Singer Sargent can be accessed here: https://www.metmuseum.org/art/collection/search/12097

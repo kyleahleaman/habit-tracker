@@ -36,10 +36,10 @@ body {
 COLOR IS #98bcdc */
 
 h2 {
-    margin-top: 10px;
+    margin-top: 0px;
     color:white;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 h4 {
@@ -72,6 +72,10 @@ input[type="number"]{
     width: 98%;
 }
 
+input[type="name"]{
+    width: 98%;
+}
+
 select{
     width: 100%;
     border-radius: 5px;
@@ -83,7 +87,7 @@ button {
     background-color: #98bcdc;
     color: white;
     padding: 14px 20px;
-    margin: 8px 0;
+    margin: 6px 0;
     border: none;
     cursor: pointer;
     width: 100%;

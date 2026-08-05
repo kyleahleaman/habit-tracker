@@ -7,6 +7,13 @@
         body {
             background-color: #91c7b1;
             font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+        }
+
+        .split-container {
+            display: flex;
+            width: 100%;
+            height: 100vh;
         }
 
         form {
@@ -14,7 +21,7 @@
             border-radius: 15px;
             box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
             padding: 20px;
-            width: 30%;
+            width: 50%;
             background-color: white;
             margin: auto;
         }
@@ -34,7 +41,7 @@
         }
 
         button {
-            background-color: #91c7b1;
+            background-color: #98bcdc;
             color: white;
             padding: 14px 20px;
             margin: 8px 0;
@@ -47,6 +54,26 @@
         button:hover {
             opacity: 0.8;
         }
+
+        .form-part {
+            flex: 1;
+            background-color: #98bcdc;
+            padding: 40px 20px;
+            overflow-y: auto; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow-y: auto;
+            align-items: center;
+        }
+
+        .picture {
+            flex: 1;
+            background-image: url('sky.jpg');
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
+        }
     </style>
 </head>
 <body>
@@ -57,27 +84,28 @@
             $message = "";
         }
     ?>
-    
-    <br><br><br><br>
 
-    <div class = "container">
-        <form name = "login" method = "post" id = "login" action = "processes/login.php">
-            <font color = "red"><?php echo $message; ?></font>
+    <div class = "split-container">
+        <div class="picture"></div>
 
-            <h1>Login</h1>
-            <label for = "username">Username:</label><br>
-            <input type = "text" name = "username" id = "username"><br><br>
+        <div class="form-part">
+            <form name = "login" method = "post" id = "login" action = "processes/login.php">
+                <font color = "red"><?php echo $message; ?></font>
 
-            <label for = "password">Password:</label><br>
-            <input type = "password" name = "password" id = "password"><br><br>
-        
-            <button onclick = "loginUser(event)">Login</button>
-            <br><br>
+                <h1>Login</h1>
+                <label for = "username">Username:</label><br>
+                <input type = "text" name = "username" id = "username"><br><br>
 
-            <a href = "processes/register.php">Not a member yet? Register here!</a>
-            <br><br>
+                <label for = "password">Password:</label><br>
+                <input type = "password" name = "password" id = "password"><br><br>
             
-        </form>
+                <button onclick = "loginUser(event)">Login</button>
+                <br><br>
+
+                <a href = "processes/register.php">Not a member yet? Register here!</a>
+                <br><br> 
+            </form>
+        </div>
     </div>
 
     <script>

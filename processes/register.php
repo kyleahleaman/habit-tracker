@@ -103,6 +103,8 @@
                 <input type = "password" name = "cpassword" id = "cpassword"><br><br>
 
                 <button onclick = "registerUser(event)">Register</button>
+
+                <h4>Not intended for users under 6!</h4>
             </form>
         </div>
     </div>

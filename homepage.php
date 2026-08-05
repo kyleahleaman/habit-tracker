@@ -10,8 +10,8 @@
         }
 
         .flex-container {
-            display: flex; /* Aligns children horizontally */
-            gap: 50px; /* Optional: Adds spacing between columns */
+            display: flex;
+            gap: 50px; 
         }
         .animal {
             width: 50vw;
@@ -83,7 +83,7 @@
         }
 
         include "navbar.php";
-        ?>
+    ?>
 
         <div class="flex-container">
             <div class="buttons">
@@ -92,7 +92,7 @@
                     <h3>Input your stats here!</h3>
                     <div class="bsections">
                         <h4>Sleep</h4>
-                        <input type = "number" name = "ehours" id = "ehours" max="24">
+                        <input type = "number" name = "shours" id = "shours" max="24">
                         <span>hours</span><br>
                         <button onclick = "testSleep(event)">Add to today's stats!</button>
                     </div>   
@@ -108,14 +108,14 @@
 
                     <div class="bsections">
                         <h4>Water</h4>
-                        <input type = "number" name = "ehours" id = "ehours" max="99">
+                        <input type = "number" name = "wounces" id = "wounces" max="99">
                         <span>ounces</span><br>
                         <button onclick = "addWater(event)">Add to today's stats!</button>
                     </div>
 
                     <div class="bsections">
                         <h4>Screen Time</h4>
-                        <input type = "number" name = "ehours" id = "ehours" max="24">
+                        <input type = "number" name = "thours" id = "thours" max="24">
                         <span>hours</span><br>
                         <button onclick = "addScreenTime(event)">Add to today's stats!</button>
                     </div>
@@ -138,11 +138,18 @@
                 </div>
             </div>
         </div>
+
         <?php include 'footer.php'; ?>
+
         <script>
+            let sleep = document.getElementById("shours").value;
+            let exercise = document.getElementById("ehours").value;
+            let water = document.getElementById("wounces").value;
+            let screen = document.getElementById("thours").value;
 
             function testSleep() {
-                alert('sleep');
+                event.preventDefault();
+                alert(`Added ${sleep} to your stats!`);
                 window.location.reload();
             }
 

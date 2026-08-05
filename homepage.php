@@ -25,6 +25,11 @@
 
         .stats {
             width: 25vw;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            margin-top: none;
         }
 
         .penguin {
@@ -36,10 +41,14 @@
             background-color: #91c7b1;
             border-radius: 15px;
             padding: 10px;
-            margin-right: 40px;
-            height: 500px;
+            margin-right: 60px;
+            height: 375px;
             overflow: auto;
             box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            margin-top: none;
         }
 
         .buttonsdiv {
@@ -47,8 +56,9 @@
             border-radius: 15px;
             padding: 10px;
             margin-left: 40px;
-            height: 415px;
+            height: 425px;
             overflow: auto;
+            width: 200px;
             box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
         }
 
@@ -56,6 +66,7 @@
             border-radius: 10px;
             margin: 5px;
             padding: 5px;
+            cursor: pointer;
         }
 
         h4 {
@@ -70,6 +81,49 @@
         h3 {
             margin-top: 0px;
             margin-bottom: 0px;
+        }
+
+        /* .reset-button button {
+            border-radius: 10px;
+            margin: 5px;
+            padding: 8px;
+            margin: auto;
+            background-color: #91c7b1;
+            align-items: center;
+            width: 100%;
+        }
+
+        .reset-button {
+            margin-top: 15px;
+            align-items: center;
+            justify-content: center; 
+            margin-right: 40px;
+            width: 250px;
+            border-radius: 15px;
+            background-color: #91c7b1;
+        } */
+
+        .reset-button {
+            margin-top: 10px;
+            margin-right: 60px; /* Changed from 40px to 60px to match statsdiv */
+            width: 265px;       /* Identical width */
+            border-radius: 15px; /* Identical border radius */
+            background-color: #91c7b1;
+            display: flex;       /* Centers the button inside */
+            justify-content: center;
+            align-items: center;
+            padding: 5px 0;    /* Adds vertical height to the container */
+        }
+
+        .reset-button button {
+            border: none;
+            background: transparent;
+            font-size: 1.2rem;   /* Makes the text bigger */
+            font-weight: bold;   /* Makes it stand out */
+            cursor: pointer;
+            width: 100%;         /* Spans full width of the container */
+            padding: 2px;       /* Adds clickable padding space */
+            text-align: center;  /* Centers the text */
         }
 
     </style>
@@ -143,7 +197,7 @@
             ?> 
 
             <div class="stats">
-                <br><br><br>
+                <br><br>
                 <div class="statsdiv">
                     <h4>Today you...</4>
                             <?php
@@ -172,11 +226,10 @@
                         <div class="bsections">
                             <h4> - had <?php echo $screenS; ?> hours of screen time!</h4>
                         </div>
-                        <!-- use the user id
-                             sql to get into sleep table (- slept ... hours) and if 0, then :(
-                             sql to get into exercise table (- exercised ... hours ) anf if 0, then :(
-                             and continue
-                             refresh button that forces it to update -->
+                </div>
+
+                <div class="reset-button">
+                    <button onclick = "resetDay(event)">Reset Day!</button></button>
                 </div>
             </div>
         </div>
@@ -210,6 +263,12 @@
                 event.preventDefault();
                 let screen = document.getElementById("thours").value;
                 alert(`Added ${screen} hours to your stats!`);
+                window.location.reload();
+            }
+
+            function resetDay() {
+                event.preventDefault();
+                alert("It's a new day! ☀️ Keep up with your habits, you can do it!")
                 window.location.reload();
             }
         </script>

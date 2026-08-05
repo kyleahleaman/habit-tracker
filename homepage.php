@@ -4,6 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home: Habit Tracker</title>
     <style>
+        button {
+            background-color: white;
+            border: none;
+        }
+
         .flex-container {
             display: flex; /* Aligns children horizontally */
             gap: 50px; /* Optional: Adds spacing between columns */
@@ -15,6 +20,7 @@
 
         .buttons {
             width: 25vw;
+           
         }
 
         .stats {
@@ -27,7 +33,7 @@
         }
 
         .statsdiv {
-            background-color: white;
+            background-color: #91c7b1;
             border-radius: 15px;
             padding: 5px;
             margin-right: 40px;
@@ -37,7 +43,7 @@
         }
 
         .buttonsdiv {
-            background-color: white;
+            background-color: #91c7b1;
             border-radius: 15px;
             padding: 10px;
             margin-left: 40px;
@@ -52,10 +58,19 @@
             padding: 5px;
         }
 
-        /* h4 {
+        h4 {
             margin-top: 10px;
             margin-bottom: 10px;
-        } */
+        }
+
+        .buttonsdiv input[type=number] {
+            width: 40px;
+        }
+
+        h3 {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
 
     </style>
 </head>
@@ -74,26 +89,34 @@
             <div class="buttons">
                 <br><br><br>
                 <div class="buttonsdiv">
+                    <h3>Input your stats here!</h3>
                     <div class="bsections">
                         <h4>Sleep</h4>
+                        <input type = "number" name = "ehours" id = "ehours" max="24">
+                        <span>hours</span><br>
                         <button onclick = "testSleep(event)">Add to today's stats!</button>
                     </div>   
 
                     <div class="bsections">
                         <h4>Exercise</h4>
                         <form>
-                            <input type = "text" name = "ehours" id = "ehours">
+                            <input type = "number" name = "ehours" id = "ehours" max="10">
+                            <span>hours</span><br>
                             <button onclick = "addExercise(event)">Add to today's stats!</button>
                         </form>
                     </div>
 
                     <div class="bsections">
                         <h4>Water</h4>
+                        <input type = "number" name = "ehours" id = "ehours" max="99">
+                        <span>ounces</span><br>
                         <button onclick = "addWater(event)">Add to today's stats!</button>
                     </div>
 
                     <div class="bsections">
                         <h4>Screen Time</h4>
+                        <input type = "number" name = "ehours" id = "ehours" max="24">
+                        <span>hours</span><br>
                         <button onclick = "addScreenTime(event)">Add to today's stats!</button>
                     </div>
                 </div>
@@ -140,4 +163,3 @@
         </script>
 </body>
 </html>
-

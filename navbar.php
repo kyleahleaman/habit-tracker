@@ -48,12 +48,12 @@
             margin-left: 2px;
         }
 
-        button {
+        .collapsible {
             background-color: #91c7b1;
             border: none;
         }
 
-        button:hover {
+        .collapsible:hover {
             background-color: rgb(236, 193, 199);
         }
 

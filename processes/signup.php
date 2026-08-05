@@ -32,12 +32,12 @@
     $result = $stmt->get_result();
     $row = $result->fetch_all(MYSQLI_ASSOC);
     $id = $row[0]['id'];
-    $sql2 = "INSERT INTO stats(id, username, coins)
-    Values ({$id},'{$_SESSION['user']}', 0);";
+    $sql2 = "INSERT INTO stats(id, username, coins, sleep, exercise, water, screen)
+    Values ({$id},'{$_SESSION['user']}', 0, 0, 0, 0, 0);";
     $stmt = $conn->prepare($sql2);
     $stmt->execute();
-    $sql3 = "INSERT INTO totals(id, username, coins)
-    Values ({$id},'{$_SESSION['user']}', 0);";
+    $sql3 = "INSERT INTO totals(id, username, coins, sleep, exercise, water, screen)
+    Values ({$id},'{$_SESSION['user']}', 0, 0, 0, 0, 0);";
     $stmt = $conn->prepare($sql3);
     $stmt->execute();
 

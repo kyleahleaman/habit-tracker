@@ -21,12 +21,19 @@
     $sql2 = "UPDATE stats
         SET age = {$_SESSION["age"]}
         WHERE username = '{$_SESSION["user"]}';";
+    
+    $sql3 = "UPDATE totals
+        SET age = {$_SESSION["age"]}
+        WHERE username = '{$_SESSION["user"]}';";
 
     // send SQL messages
     $stmt = $conn->prepare($sql);
     $stmt->execute();
 
     $stmt = $conn->prepare($sql2);
+    $stmt->execute();
+
+    $stmt = $conn->prepare($sql3);
     $stmt->execute();
 
     $conn->close();

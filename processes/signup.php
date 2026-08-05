@@ -36,6 +36,10 @@
     Values ({$id},'{$_SESSION['user']}', 0);";
     $stmt = $conn->prepare($sql2);
     $stmt->execute();
+    $sql3 = "INSERT INTO totals(id, username, coins)
+    Values ({$id},'{$_SESSION['user']}', 0);";
+    $stmt = $conn->prepare($sql3);
+    $stmt->execute();
 
     $conn->close();
     header('location:../surveyPage.html');

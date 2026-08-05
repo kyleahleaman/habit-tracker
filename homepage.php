@@ -273,7 +273,7 @@
             function resetDay() {
                 event.preventDefault();
                 alert("It's a new day! ☀️ Keep up with your habits, you can do it!")
-                window.location.reload();
+                window.location.href = "updates/reset.php?";
             }
         </script>
 </body>

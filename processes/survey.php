@@ -13,16 +13,23 @@
         die("Connection failed: " . $conn->connect_error);
     }
     
-    // prepare the SQL message
+    // prepare the SQL messages
     $sql = "UPDATE users
         SET avatar = '{$_SESSION["avatar"]}',
         age = {$_SESSION["age"]}
         WHERE username = '{$_SESSION["user"]}';";
 
-    // send this SQL message
+    $sql2 = "UPDATE stats
+        SET age = {$_SESSION["age"]}
+        WHERE username = '{$_SESSION["user"]}';";
+
+    // send SQL messages
     $stmt = $conn->prepare($sql);
     $stmt->execute();
-    $conn->close();
 
+    $stmt = $conn->prepare($sql2);
+    $stmt->execute();
+
+    $conn->close();
     header('location:../index.php?message=Please log in.');
 ?>

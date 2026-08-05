@@ -28,8 +28,10 @@
         .w3-top,.w3-bottom{
             z-index:1;overflow: hidden;left:0;}.w3-top{top:0}.w3-bottom{bottom:0}
 
-        nav {
+        ul.footer{
+            display: flex;
             width: 100%;
+            justify-content: space-between;
         }
 
     </style>
@@ -38,7 +40,7 @@
     <footer>
         <nav>
             <div class='w3-bottom'>
-                <ul>
+                <ul class="footer">
                     <li><a href="aboutGallery.php">About Us</a></li>
                     <li><a href="https://github.com/kyleahleaman/habit-tracker">Created by Emma Lang, Kyleah Leaman, Paige Hershey, and Sophia Banh</a></li>
                     <li><a href="research.html">Sources</a></li>

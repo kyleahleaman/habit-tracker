@@ -1,4 +1,4 @@
-ody{
+body{
     background-color:#fbfffd;
     font-family:monospace;
 }
@@ -21,6 +21,8 @@ h1{
     padding: 10px;
     text-align: center;
     box-shadow: 0 2px 8px #739f8e;
+    display: flex;
+    flex-direction: column;
 }
 
 .card img{

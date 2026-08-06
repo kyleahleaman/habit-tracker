@@ -10,6 +10,7 @@
             border: none;
             border-radius: 10px;
             padding: 5px;
+            margin-left: 10px;
             margin-top: auto;
         }
     </style>
@@ -37,8 +38,7 @@
         echo '<br>';
         echo '<p></p>';
         echo '<p></p>';
-        include '../footer.php';
-
+    include '../footer.php';
     ?>
 </body>
 </html>

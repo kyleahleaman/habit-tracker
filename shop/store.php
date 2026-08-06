@@ -18,21 +18,27 @@
 <script>
     function buy (event) {
         event.preventDefault();
-        console.log(event);
         var s = event.srcElement.id;
-        console.log(s);
         alert ('Bought! Thank you for doing business with us!')
+        window.location.href = "buy.php?item=" + s;
     }
 </script>
 
 <body>
+
+    <?php session_start(); ?>
+
     <?php 
         include '../navbar.php';
-        include 'food.php';
-        echo '<br>';
+        // include 'food.php';
+        // echo '<br>';
         include 'hats.php';
         echo '<br>';
+        echo '<br>';
+        echo '<p></p>';
+        echo '<p></p>';
         include '../footer.php';
+
     ?>
 </body>
 </html>

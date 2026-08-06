@@ -42,6 +42,15 @@
             margin-top: 40px;
         }
 
+        .raccoon {
+            margin-top: 25px;
+        }
+
+        .orangutan {
+            height: 95%;
+            margin-top: 10px;
+        }
+
         .statsdiv {
             background-color: #91c7b1;
             border-radius: 15px;

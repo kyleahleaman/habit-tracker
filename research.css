@@ -1,0 +1,40 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url(sky.jpg);
+    /* background-repeat: repeat-y; */
+    margin: 100px;
+}
+
+h1{
+    color:rgb(57, 62, 110);
+    text-align: center;
+}
+
+h2{
+    color:rgb(57, 62, 110);
+    text-align: center;
+}
+
+form{
+    background-color: #98bcdcbb;
+    max-width: 800px;
+    border-radius: 10px;
+    padding: 25px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(176, 86, 86, 0.2);
+}
+
+p{
+    line-height: 1.75;
+    
+}
+
+a{
+    color: rgb(201, 51, 215);
+  background-color: #98bcdcbb;
+  font-weight:bolder;
+ 
+}
+a:hover {
+  color: hotpink;
+}

@@ -30,9 +30,9 @@
 
     <?php 
         include '../navbar.php';
-        // include 'food.php';
+        include 'food.php';
         // echo '<br>';
-        include 'hats.php';
+        // include 'hats.php';
         echo '<br>';
         echo '<br>';
         echo '<p></p>';

@@ -46,7 +46,7 @@
     <div class="card">
     <img src= "images\food\clker-free-vector-images-sushi-35212_1920.png" width= "50" height = "auto" alt = "Sushi">
         <h3>Sushi</h3>
-        <h4>50 coins</h4>
+        <h4>5 coins</h4>
         <button class = "store" onclick = "buy(event)" id = "sushi">Buy</button>
     </div>
 </div>

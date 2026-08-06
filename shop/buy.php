@@ -7,15 +7,24 @@
     }
 
     if (isset($_GET['item']) && isset($_SESSION['user'])) {
-        $item = $_GET['item'];
-        $current_user = $_SESSION['user'];
+        if($_SESSION["coins"] >= 5){
+            $item = $_GET['item'];
+            $current_user = $_SESSION['user'];
 
-        $sql = "UPDATE users SET item = ? WHERE username = ?";
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ss", $item, $current_user);
-        
-        $stmt->execute();
-        $stmt->close();
+            $sql = "UPDATE users SET item = ? WHERE username = ?;";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("ss", $item, $current_user);
+            $stmt->execute();
+
+            $_SESSION["coins"] = $_SESSION["coins"] - 5;
+            $sql2 = "UPDATE users SET coins = {$_SESSION["coins"]} WHERE username = '{$_SESSION['user']}';";
+
+            $stmt = $conn->prepare($sql2);
+            $stmt->execute();
+            $conn->close();
+        }else{
+            echo "<script>alert('This is an alert message!');</script>";
+        }
     }
 
     header("Location: ../homepage.php");

@@ -45,7 +45,7 @@
     </style>
 </head>
 <body>
-    <?php include 'navbar.php'; ?>
+    <?php session_start(); include 'navbar.php'; ?>
     <h1>About Us</h1>
     <div class="topIntro">
         <h3>

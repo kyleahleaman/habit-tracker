@@ -20,7 +20,7 @@
     function buy (event) {
         event.preventDefault();
         var s = event.srcElement.id;
-        alert ('Bought! Thank you for doing business with us!')
+        alert ('Bought! Great job earning yourself a treat!')
         window.location.href = "buy.php?item=" + s;
     }
 </script>

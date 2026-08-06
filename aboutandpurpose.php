@@ -18,7 +18,7 @@ include "navbar.php";
     <h4>The purpose of this website is to provide people with the motivation to build meaningful and 
         lasting habits through engaging with an animal of your choice.</h4><br>
     <h2>Meet our team!</h2>
-    <h3>Sophia- I like to play tennis, craft, and my favorite color is pink.</h3>
+    <h3>Sophia- MCA is my first coding experience. I'm very grateful for this opportunity and have enjoyed learning all of the different coding languages.</h3>
     <h3>Paige- This class has been my first experience with coding. It has been a huge challenge for me, 
         but I am so glad that I took this opportunity. I hope that this habit tracker can be useful and helpful.</h3>
     <h3>Kyleah- While I have coded before, this class has helped me gain more valuable real world skills 

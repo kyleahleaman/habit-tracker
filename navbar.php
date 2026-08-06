@@ -69,6 +69,13 @@
             background-color: rgb(236, 193, 199);
         }
 
+        .center{
+            float: left;
+            margin-left: 440px;
+            margin-top: 20px;
+            text-transform: capitalize;
+        }
+
     </style>
 </head>
 <body>
@@ -78,6 +85,10 @@
                 <?PHP if($_SERVER["SERVER_ADDR"]=="127.0.0.1"){ ?>
                     <li><a href="/habit-tracker/homepage.php"><img src="/habit-tracker/images/home.png" width="70%" style="margin-top: 2px;"></a></li>
                     <li><a href="/habit-tracker/shop/shop.php"><img src="/habit-tracker/images/shop.png" width="70%" style="margin-top: 2px;"></a></li>
+
+                    <div class="center">
+                        <li><?php echo $_SESSION['avatar_name']; ?></li>
+                    </div>
 
                     <div class="left">
                         <li><a href="/habit-tracker/profile.php"><img src="/habit-tracker/images/profile.png" width="66%" style="margin-left: 7px;"></a></li>

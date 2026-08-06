@@ -46,7 +46,9 @@
             font-size: 18px;
             justify-content: center;
             align-items: center;
-            height: 31px
+            height: 31px;
+            padding-top: 20px;
+            padding-bottom: 8px;
         }
 
         .left {
@@ -79,7 +81,7 @@
 
                     <div class="left">
                         <li><a href="/habit-tracker/profile.php"><img src="/habit-tracker/images/profile.png" width="66%" style="margin-left: 7px;"></a></li>
-                        <button type="button" class="collapsible">▼</button>
+                        <button type="button" class="collapsible">►</button>
 
                         <div class="content-hidden">
                             <ul>
@@ -93,16 +95,19 @@
                 <?PHP }else{ ?>
                     <li><a href="/homepage.php"><img src="/images/home.png" width="75%"></a></li>
                     <li><a href="/shop/shop.php"><img src="/images/shop.png" width="75%"></a></li>
-                    <li><a href="/profile.php"><img src="/images/profile.png" width="75%"></a></li>
-                    <button type="button" class="collapsible">▼</button><li>
 
-                    <div class="content-hidden">
-                        <ul>
-                            <li><a href="/profile.php">Profile</a></li>
-                            <li><a href="/shop/shop.php">Shop</a></li>
-                            <li><a href="/surveyPage.html">Habits</a></li>
-                            <li><a href="/processes/logout.php">Logout</a></li>
-                        </ul>
+                    <div class="left">
+                        <li><a href="/profile.php"><img src="/images/profile.png" width="66%" style="margin-left: 7px;"></a></li>
+                        <button type="button" class="collapsible">►</button>
+
+                        <div class="content-hidden">
+                            <ul>
+                                <li><a href="/profile.php">Profile</a><br></li>
+                                <li><a href="/shop/shop.php">Shop</a><br></li>
+                                <li><a href="/surveyPage.html">Habits</a><br></li>
+                                <li><a href="/processes/logout.php">Logout</a><br></li>
+                            </ul>
+                        </div>
                     </div>
                 <?PHP }; ?>
             </ul>

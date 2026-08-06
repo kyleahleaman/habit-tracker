@@ -132,6 +132,34 @@
             transform: translate(-150px, 0px);
         }
 
+        .apple {
+            width: 375%;
+            margin-top: 350px;
+            position: relative;
+            transform: translate(-150px, 0px);
+        }
+
+        .taco {
+            width: 375%;
+            margin-top: 350px;
+            position: relative;
+            transform: translate(-150px, 0px);
+        }
+
+        .milkshake {
+            width: 375%;
+            margin-top: 350px;
+            position: relative;
+            transform: translate(-150px, 0px);
+        }
+
+        .sushi {
+            width: 375%;
+            margin-top: 350px;
+            position: relative;
+            transform: translate(-150px, 0px);
+        }
+
     </style>
 </head>
 <body>
@@ -182,9 +210,6 @@
                 </div>
             </div>
 
-
-
-
             <?php 
                 require_once('processes/dbconfig.php');
                 $conn = new mysqli($servername, $username, $password, $database);
@@ -212,7 +237,7 @@
             <div class="animal">
                 <img src="images/<?php echo $animalS; ?>.png" class="<?php  echo $animalS; ?>">
             </div>
-
+            
             <?php if (isset($food)) { ?>
                 <div class="food">
                     <img src="shop/images/food/ozempic<?php echo $food; ?>.png" class="<?php  echo $food; ?>">

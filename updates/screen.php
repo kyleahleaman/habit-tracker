@@ -10,12 +10,19 @@
         $screen_amount = floatval($_GET['screen']);
         $current_user = $_SESSION['user'];
 
-        $sql = "UPDATE stats SET screen = screen + ? WHERE username = ?";
+        $sql = "UPDATE stats SET screen = screen + ?, coins = coins + ? WHERE username = ?";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ds", $screen_amount, $current_user);
+        $stmt->bind_param("dds", $screen_amount, $screen_amount, $current_user);
         
         $stmt->execute();
         $stmt->close();
+    
+        $sql2 = "UPDATE totals SET screen = screen + ?, coins = coins + ? WHERE username = ?";
+        $stmt2 = $conn->prepare($sql2);
+        $stmt2->bind_param("dds", $screen_amount, $screen_amount, $current_user);
+        
+        $stmt2->execute();
+        $stmt2->close();
     }
 
     header("Location: ../homepage.php");

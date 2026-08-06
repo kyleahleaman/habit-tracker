@@ -16,6 +16,13 @@
         
         $stmt->execute();
         $stmt->close();
+
+        $sql2 = "UPDATE totals SET sleep = sleep + ? WHERE username = ?";
+        $stmt2 = $conn->prepare($sql2);
+        $stmt2->bind_param("ds", $sleep_amount, $current_user);
+        
+        $stmt2->execute();
+        $stmt2->close();
     }
 
     header("Location: ../homepage.php");

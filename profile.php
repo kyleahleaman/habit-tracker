@@ -16,6 +16,7 @@
             display: flex;
             flex-direction: column;
             margin-top: none;
+            margin-bottom: 10px;
         }
 
         .statsdiv {
@@ -29,6 +30,7 @@
             display: flex;
             flex-direction: column;
             margin-top: none;
+            margin-bottom: 5px;
         }
 
         .animal {
@@ -72,7 +74,7 @@
             <h2>Hi, <?php echo htmlspecialchars($_SESSION['user']); ?>!</h2>
             <br><br>
             <div class="statsdiv">
-                <h4>In total, you've...</4>
+                <h3>In total, you've...</h4>
                 <?php
                     for ($i = 0; $i < count($rows); $i++){
                         $coinsS = $rows[$i]['coins'];

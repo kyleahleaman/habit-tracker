@@ -10,7 +10,7 @@
     if (isset($_SESSION['user'])) {
         $current_user = $_SESSION['user'];
 
-        $sql = "UPDATE stats SET sleep = 0.00, exercise = 0.00, screen = 0.00, water = 0.00 WHERE username = ?";
+        $sql = "UPDATE stats SET coins = 0, sleep = 0.00, exercise = 0.00, screen = 0.00, water = 0.00 WHERE username = ?";
         
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("s", $current_user);

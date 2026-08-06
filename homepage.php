@@ -199,7 +199,7 @@
             <div class="stats">
                 <br><br>
                 <div class="statsdiv">
-                    <h4>Today you...</4>
+                    <h3>Today you...</h3>
                             <?php
                                 for ($i = 0; $i < count($rows); $i++){
                                     $coinsS = $rows[$i]['coins'];

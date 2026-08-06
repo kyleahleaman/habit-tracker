@@ -209,6 +209,25 @@
                                     $waterS = $rows[$i]['water'];
                                     $screenS = $rows[$i]['screen'];
                                 }
+
+                                if ($ageS < 12){
+                                    $sugSleep = 9;
+                                    $sugEx = 1;
+                                    $sugO = 32;
+                                    $sugS = 1;
+                                } else if ($ageS < 18) {
+                                    $sugSleep = 8;
+                                    $sugEx = 1;
+                                    $sugO = 64;
+                                    $sugS = 2;
+                                }else{
+                                    $sugSleep = 8;
+                                    $sugEx = 1.25;
+                                    $sugO = 90;
+                                    $sugS = 3;
+                                }
+                               
+
                             ?>
 
                         <div class="bsections">
@@ -216,19 +235,19 @@
                         </div>
 
                         <div class="bsections">
-                            <h4> - slept <?php echo $sleepS; ?> hours of VARAIBLE!</h4>
+                            <h4> - slept <?php echo $sleepS; ?> out of <?php echo $sugSleep; ?> recommended hours!</h4>
                         </div>
 
                         <div class="bsections">
-                            <h4> - exercised <?php echo $exerciseS; ?> hours of VARIABLE!</h4>
+                            <h4> - exercised <?php echo $exerciseS; ?> out of <?php echo $sugEx; ?> recommended hours!</h4>
                         </div>
 
                         <div class="bsections">
-                            <h4> - drank <?php echo $waterS; ?> ounces of VARIABLE!</h4>
+                            <h4> - drank <?php echo $waterS; ?> out of <?php echo $sugO; ?> recommended ounces!</h4>
                         </div>
 
                         <div class="bsections">
-                            <h4> - had <?php echo $screenS; ?> hours of screen time!</h4>
+                            <h4> - had <?php echo $screenS; ?> out of <?php echo $sugS; ?> recommended hours of screen time!</h4>
                         </div>
                 </div>
 

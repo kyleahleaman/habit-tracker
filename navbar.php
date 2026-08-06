@@ -39,6 +39,16 @@
             flex-direction: column;
         }
 
+        .content-hidden li a{
+            display: inline-block;
+            color: #2a2b2e;
+            text-decoration: none;
+            font-size: 18px;
+            justify-content: center;
+            align-items: center;
+            height: 31px
+        }
+
         .left {
             display: flex;
             justify-content: flex-end;

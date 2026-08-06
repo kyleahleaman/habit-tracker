@@ -12,14 +12,14 @@
 
         $sql = "UPDATE stats SET sleep = sleep + ?,  coins = coins + ? WHERE username = ?";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ds", $sleep_amount, $current_user);
+        $stmt->bind_param("dds", $sleep_amount, $sleep_amount, $current_user);
         
         $stmt->execute();
         $stmt->close();
 
         $sql2 = "UPDATE totals SET sleep = sleep + ?, coins = coins + ? WHERE username = ?";
         $stmt2 = $conn->prepare($sql2);
-        $stmt2->bind_param("ds", $sleep_amount, $current_user);
+        $stmt2->bind_param("dds", $sleep_amount, $sleep_amount, $current_user);
         
         $stmt2->execute();
         $stmt2->close();

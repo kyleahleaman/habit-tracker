@@ -12,14 +12,14 @@
 
         $sql = "UPDATE stats SET water = water + ?,  coins = coins + ? WHERE username = ?";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ds", $water_amount, $current_user);
+        $stmt->bind_param("dds", $water_amount, $water_amount, $current_user);
         
         $stmt->execute();
         $stmt->close();
 
         $sql2 = "UPDATE totals SET water = water + ?,  coins = coins + ? WHERE username = ?";
         $stmt2 = $conn->prepare($sql2);
-        $stmt2->bind_param("ds", $water_amount, $current_user);
+        $stmt2->bind_param("dds", $water_amount, $water_amount, $current_user);
         
         $stmt2->execute();
         $stmt2->close();

@@ -12,14 +12,14 @@
 
         $sql = "UPDATE stats SET exercise = exercise + ?, coins = coins + ? WHERE username = ?";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ds", $exercise_amount, $current_user);
+        $stmt->bind_param("dds", $exercise_amount, $exercise_amount, $current_user);
         
         $stmt->execute();
         $stmt->close();
 
         $sql2 = "UPDATE totals SET exercise = exercise + ?,  coins = coins + ? WHERE username = ?";
         $stmt2 = $conn->prepare($sql2);
-        $stmt2->bind_param("ds", $exercise_amount, $current_user);
+        $stmt2->bind_param("dds", $exercise_amount, $exercise_amount, $current_user);
         
         $stmt2->execute();
         $stmt2->close();

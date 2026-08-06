@@ -63,7 +63,7 @@
         <div class="card">
             <h3>Sophia</h3>
             <div class="bios">
-                <h5>Sophia is awesome and likes pink</h5>
+                <h5>MCA is my first experience with coding. I enjoyed learning about all of programming languages. </h5>
             </div>
         </div>
 

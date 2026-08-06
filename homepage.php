@@ -40,6 +40,7 @@
         .narwhal {
             margin: auto;
             margin-top: 40px;
+            margin-left: 25px;
         }
 
         .raccoon {

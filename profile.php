@@ -34,7 +34,7 @@
         }
 
         .animal {
-            width: 50vw;
+            width: 30vw;
             margin: 15px;
         }
 
@@ -64,6 +64,34 @@
             height: 85%;
             margin-top: none;
             margin-bottom: none;
+        }
+
+
+        .yoyodiv {
+            width:50%;
+        }
+
+        .yoyo {
+            width: 50%;
+            margin-top: 350px;
+            position: relative;
+            /* transform: translate(0px, 0px); */
+        }
+
+        .yayyoyo {
+            background-color: #91c7b1;
+            border-radius: 15px;
+            padding: 10px;
+            height: 370px;
+            overflow: auto;
+            box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            margin-top: 100px;
+            margin-bottom: 2px;
+            margin-right: none;
+            align-items: center;
         }
 
     </style>
@@ -146,6 +174,15 @@
             ?>
             <img src="images/<?php echo $animalS; ?>.png" class="<?php  echo $animalS; ?>">
         </div>
+            <?php if ($coinsS > 499) { ?>
+                <div class="yoyodiv">
+                    <img src="shop/images/decor/DANIELSYOYO.png" class="yoyo">
+                </div>
+                <div class="yayyoyo">
+                    <h3>WOW!</h3><br>
+                    <h3>You've earned at least 500 coins and got a secret yoyo! Great job!</h3>
+                </div>    
+            <?php } ?>
     </div>
 
         <?php $conn->close(); include 'footer.php'; ?>

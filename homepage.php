@@ -40,7 +40,7 @@
         .narwhal {
             margin: auto;
             margin-top: 40px;
-            margin-left: 25px;
+            margin-left: 20px;
         }
 
         .raccoon {
@@ -73,7 +73,7 @@
             margin-left: 40px;
             height: 425px;
             overflow: auto;
-            width: 200px;
+            width: 250px;
             box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
         }
 

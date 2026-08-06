@@ -23,19 +23,19 @@
             background-color: #91c7b1;
             border-radius: 15px;
             padding: 10px;
-            height: 375px;
+            height: 370px;
             overflow: auto;
             box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
             width: 400px;
             display: flex;
             flex-direction: column;
             margin-top: none;
-            margin-bottom: 5px;
+            margin-bottom: 2px;
         }
 
         .animal {
             width: 50vw;
-            margin: 22px;
+            margin: 15px;
         }
 
         h2 {
@@ -43,7 +43,7 @@
         }
 
         .penguin {
-            height: 97%;
+            height: 95%;
             margin-top: 10px;
         }
 

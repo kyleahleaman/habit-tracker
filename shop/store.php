@@ -13,6 +13,39 @@
             margin-left: 10px;
             margin-top: auto;
         }
+
+        body{
+            background-color:#fbfffd;
+            font-family:monospace;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        .gallery{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card{
+            width: 200px;
+            background-color:#91c7b1;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 8px #739f8e;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card img{
+            width: 100%;
+            border-radius: 8px;
+
+        }
     </style>
 </head>
 

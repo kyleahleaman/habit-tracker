@@ -59,7 +59,7 @@
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
-        $sql2 = "SELECT * FROM stats where username='{$_SESSION['user']}';";
+        $sql2 = "SELECT * FROM totals where username='{$_SESSION['user']}';";
         $stmt2 = $conn->prepare($sql2);
         $stmt2->execute();
         $result2 = $stmt2->get_result();

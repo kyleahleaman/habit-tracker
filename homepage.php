@@ -37,6 +37,11 @@
             margin-top: 10px;
         }
 
+        .narwhal {
+            margin: auto;
+            margin-top: 40px;
+        }
+
         .statsdiv {
             background-color: #91c7b1;
             border-radius: 15px;
@@ -83,47 +88,27 @@
             margin-bottom: 0px;
         }
 
-        /* .reset-button button {
-            border-radius: 10px;
-            margin: 5px;
-            padding: 8px;
-            margin: auto;
-            background-color: #91c7b1;
-            align-items: center;
-            width: 100%;
-        }
-
-        .reset-button {
-            margin-top: 15px;
-            align-items: center;
-            justify-content: center; 
-            margin-right: 40px;
-            width: 250px;
-            border-radius: 15px;
-            background-color: #91c7b1;
-        } */
-
         .reset-button {
             margin-top: 10px;
-            margin-right: 60px; /* Changed from 40px to 60px to match statsdiv */
-            width: 265px;       /* Identical width */
-            border-radius: 15px; /* Identical border radius */
+            margin-right: 60px;
+            width: 265px;      
+            border-radius: 15px; 
             background-color: #91c7b1;
-            display: flex;       /* Centers the button inside */
+            display: flex;      
             justify-content: center;
             align-items: center;
-            padding: 5px 0;    /* Adds vertical height to the container */
+            padding: 5px 0; 
         }
 
         .reset-button button {
             border: none;
             background: transparent;
-            font-size: 1.2rem;   /* Makes the text bigger */
-            font-weight: bold;   /* Makes it stand out */
+            font-size: 1.2rem;   
+            font-weight: bold;  
             cursor: pointer;
-            width: 100%;         /* Spans full width of the container */
-            padding: 2px;       /* Adds clickable padding space */
-            text-align: center;  /* Centers the text */
+            width: 100%;        
+            padding: 2px;     
+            text-align: center;
         }
 
     </style>
@@ -176,9 +161,7 @@
                 </div>
             </div>
 
-            <div class="animal">
-                <img src="images/penguin.png" class="penguin"> <!--  PLACEHOLDER -->
-            </div>
+
 
 
             <?php 
@@ -194,21 +177,33 @@
                 $result = $stmt->get_result();
 
                 $rows = $result->fetch_all(MYSQLI_ASSOC);
+
+                $sql2 = "SELECT * FROM users where username='{$_SESSION['user']}';";
+                $stmt2 = $conn->prepare($sql2);
+                $stmt2->execute();
+                $result2 = $stmt2->get_result();
+
+                $rows2 = $result2->fetch_all(MYSQLI_ASSOC);
+                $animalS = $rows2[0]['avatar'];
             ?> 
+
+            <div class="animal">
+                <img src="images/<?php echo $animalS; ?>.png" class="<?php  echo $animalS; ?>">
+            </div>
+
+
 
             <div class="stats">
                 <br><br>
                 <div class="statsdiv">
                     <h3>Today you...</h3>
                             <?php
-                                for ($i = 0; $i < count($rows); $i++){
-                                    $coinsS = $rows[$i]['coins'];
-                                    $ageS = $rows[$i]['age'];
-                                    $sleepS = $rows[$i]['sleep'];
-                                    $exerciseS = $rows[$i]['exercise'];
-                                    $waterS = $rows[$i]['water'];
-                                    $screenS = $rows[$i]['screen'];
-                                }
+                                $coinsS = $rows[0]['coins'];
+                                $ageS = $rows[0]['age'];
+                                $sleepS = $rows[0]['sleep'];
+                                $exerciseS = $rows[0]['exercise'];
+                                $waterS = $rows[0]['water'];
+                                $screenS = $rows[0]['screen'];
 
                                 if ($ageS < 12){
                                     $sugSleep = 9;
@@ -226,8 +221,6 @@
                                     $sugO = 90;
                                     $sugS = 3;
                                 }
-                               
-
                             ?>
 
                         <div class="bsections">

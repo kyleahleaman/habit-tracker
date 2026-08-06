@@ -41,6 +41,31 @@
         h2 {
             margin-bottom: 5px;
         }
+
+        .penguin {
+            height: 97%;
+            margin-top: 10px;
+        }
+
+        .narwhal {
+            margin: auto;
+            margin-bottom: none;
+            height: 98%;
+            margin-top: 10px;
+        }
+
+        .raccoon {
+            margin-top: none;
+            margin-bottom: none;
+            height: 95%;
+        }
+
+        .orangutan {
+            height: 85%;
+            margin-top: none;
+            margin-bottom: none;
+        }
+
     </style>
 </head>
 <body>
@@ -68,6 +93,14 @@
             $stmt->execute();
             $result = $stmt->get_result();
             $rows = $result->fetch_all(MYSQLI_ASSOC);
+
+            $sql2 = "SELECT * FROM users where username='{$_SESSION['user']}';";
+            $stmt2 = $conn->prepare($sql2);
+            $stmt2->execute();
+            $result2 = $stmt2->get_result();
+
+            $rows2 = $result2->fetch_all(MYSQLI_ASSOC);
+            $animalS = $rows2[0]['avatar'];
         ?> 
 
         <div class="stats">
@@ -76,14 +109,12 @@
             <div class="statsdiv">
                 <h3>In total, you've...</h4>
                 <?php
-                    for ($i = 0; $i < count($rows); $i++){
-                        $coinsS = $rows[$i]['coins'];
-                        $ageS = $rows[$i]['age'];
-                        $sleepS = $rows[$i]['sleep'];
-                        $exerciseS = $rows[$i]['exercise'];
-                        $waterS = $rows[$i]['water'];
-                        $screenS = $rows[$i]['screen'];
-                    }
+                    $coinsS = $rows[0]['coins'];
+                    $ageS = $rows[0]['age'];
+                    $sleepS = $rows[0]['sleep'];
+                    $exerciseS = $rows[0]['exercise'];
+                    $waterS = $rows[0]['water'];
+                    $screenS = $rows[0]['screen'];
                 ?>
 
                 <div class="bsections">
@@ -106,7 +137,14 @@
         </div>
 
         <div class="animal">
-            <img src="images/penguin.png" class="penguin"> <!--  PLACEHOLDER -->
+            <?php 
+                if ($animalS == 'orangutan') {
+                    $animalS = 'skinnyOrangutan';
+                } else if ($animalS == 'narwhal') {
+                    $animalS = 'skinnyNarwhal';
+                }
+            ?>
+            <img src="images/<?php echo $animalS; ?>.png" class="<?php  echo $animalS; ?>">
         </div>
     </div>
 

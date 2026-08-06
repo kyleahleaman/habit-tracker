@@ -10,14 +10,14 @@
         $water_amount = floatval($_GET['water']);
         $current_user = $_SESSION['user'];
 
-        $sql = "UPDATE stats SET water = water + ? WHERE username = ?";
+        $sql = "UPDATE stats SET water = water + ?,  coins = coins + ? WHERE username = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("ds", $water_amount, $current_user);
         
         $stmt->execute();
         $stmt->close();
 
-        $sql2 = "UPDATE totals SET water = water + ? WHERE username = ?";
+        $sql2 = "UPDATE totals SET water = water + ?,  coins = coins + ? WHERE username = ?";
         $stmt2 = $conn->prepare($sql2);
         $stmt2->bind_param("ds", $water_amount, $current_user);
         

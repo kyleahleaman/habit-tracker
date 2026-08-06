@@ -10,14 +10,14 @@
         $sleep_amount = floatval($_GET['sleep']);
         $current_user = $_SESSION['user'];
 
-        $sql = "UPDATE stats SET sleep = sleep + ? WHERE username = ?";
+        $sql = "UPDATE stats SET sleep = sleep + ?,  coins = coins + ? WHERE username = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("ds", $sleep_amount, $current_user);
         
         $stmt->execute();
         $stmt->close();
 
-        $sql2 = "UPDATE totals SET sleep = sleep + ? WHERE username = ?";
+        $sql2 = "UPDATE totals SET sleep = sleep + ?, coins = coins + ? WHERE username = ?";
         $stmt2 = $conn->prepare($sql2);
         $stmt2->bind_param("ds", $sleep_amount, $current_user);
         

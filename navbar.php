@@ -84,7 +84,7 @@
             <ul>
                 <?PHP if($_SERVER["SERVER_ADDR"]=="127.0.0.1"){ ?>
                     <li><a href="/habit-tracker/homepage.php"><img src="/habit-tracker/images/home.png" width="70%" style="margin-top: 2px;"></a></li>
-                    <li><a href="/habit-tracker/shop/shop.php"><img src="/habit-tracker/images/shop.png" width="70%" style="margin-top: 2px;"></a></li>
+                    <li><a href="/habit-tracker/shop/store.php"><img src="/habit-tracker/images/shop.png" width="70%" style="margin-top: 2px;"></a></li>
 
                     <div class="center">
                         <li><?php echo $_SESSION['avatar_name']; ?></li>
@@ -97,7 +97,7 @@
                         <div class="content-hidden">
                             <ul>
                                 <li><a href="/habit-tracker/profile.php">Profile</a><br></li>
-                                <li><a href="/habit-tracker/shop/shop.php">Shop</a><br></li>
+                                <li><a href="/habit-tracker/shop/store.php">Shop</a><br></li>
                                 <li><a href="/habit-tracker/surveyPage.html">Habits</a><br></li>
                                 <li><a href="/habit-tracker/processes/logout.php">Logout</a><br></li>
                             </ul>
@@ -105,7 +105,7 @@
                     </div>
                 <?PHP }else{ ?>
                     <li><a href="/homepage.php"><img src="/images/home.png" width="75%"></a></li>
-                    <li><a href="/shop/shop.php"><img src="/images/shop.png" width="75%"></a></li>
+                    <li><a href="/shop/store.php"><img src="/images/shop.png" width="75%"></a></li>
 
                     <div class="left">
                         <li><a href="/profile.php"><img src="/images/profile.png" width="66%" style="margin-left: 7px;"></a></li>
@@ -114,7 +114,7 @@
                         <div class="content-hidden">
                             <ul>
                                 <li><a href="/profile.php">Profile</a><br></li>
-                                <li><a href="/shop/shop.php">Shop</a><br></li>
+                                <li><a href="/shop/store.php">Shop</a><br></li>
                                 <li><a href="/surveyPage.html">Habits</a><br></li>
                                 <li><a href="/processes/logout.php">Logout</a><br></li>
                             </ul>

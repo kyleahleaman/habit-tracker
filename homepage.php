@@ -224,6 +224,10 @@
                         </div>
 
                         <div class="bsections">
+                            <h4> - drank <?php echo $waterS; ?> ounces of VARIABLE!</h4>
+                        </div>
+
+                        <div class="bsections">
                             <h4> - had <?php echo $screenS; ?> hours of screen time!</h4>
                         </div>
                 </div>

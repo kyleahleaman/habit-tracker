@@ -19,7 +19,7 @@
         }
 
         .buttons {
-            width: 25vw;
+            width: 20vw;
            
         }
 
@@ -56,7 +56,7 @@
             background-color: #91c7b1;
             border-radius: 15px;
             padding: 10px;
-            margin-right: 60px;
+            margin-right: 40px;
             height: 375px;
             overflow: auto;
             box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
@@ -100,7 +100,7 @@
 
         .reset-button {
             margin-top: 10px;
-            margin-right: 60px;
+            margin-right: 40px;
             width: 265px;      
             border-radius: 15px; 
             background-color: #91c7b1;
@@ -119,6 +119,17 @@
             width: 100%;        
             padding: 2px;     
             text-align: center;
+        }
+
+        .food {
+            width:100%;
+        }
+
+        .cake {
+            width: 375%;
+            margin-top: 350px;
+            position: relative;
+            transform: translate(-150px, 0px);
         }
 
     </style>
@@ -195,12 +206,18 @@
 
                 $rows2 = $result2->fetch_all(MYSQLI_ASSOC);
                 $animalS = $rows2[0]['avatar'];
+                $food = $rows2[0]['item'];
             ?> 
 
             <div class="animal">
                 <img src="images/<?php echo $animalS; ?>.png" class="<?php  echo $animalS; ?>">
             </div>
 
+            <?php if (isset($food)) { ?>
+                <div class="food">
+                    <img src="shop/images/food/ozempic<?php echo $food; ?>.png" class="<?php  echo $food; ?>">
+                </div>
+            <?php } ?>
 
 
             <div class="stats">
